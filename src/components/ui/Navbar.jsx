@@ -1,7 +1,10 @@
+import logo from "../../assets/logo.png"
+
 function Navbar(){
     return(
         <div className="flex justify-between px-14 py-5">
-            <div>
+            <div className="flex items-center gap-2">
+                <img src={logo} alt="logo" className="size-10" />
                 <p className="text-3xl font-bold">FusionPixel</p>
             </div>
             <ul className="flex gap-8 text-lg font-medium">
