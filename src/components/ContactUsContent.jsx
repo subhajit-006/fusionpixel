@@ -4,10 +4,10 @@ function ContactUsContent() {
             <h1 className="text-6xl font-bold">Contact Us</h1>
             <p className="text-xl">Get in touch with our team for any inquiries or to start your project.</p>
             <div className="flex flex-col gap-3">
-                <div className="flex gap-36">
+                <div className="flex gap-32">
                     <div className="flex gap-3 items-center">
                         <i className="fa-regular fa-envelope text-2xl"></i>
-                        <p className="text-lg">fusionpixel@gmail.com</p>
+                        <p className="text-lg">fushionpixellabs@gmail.com</p>
                     </div>
                     <div className="flex gap-3 items-center">
                         <i className="fa-solid fa-phone text-2xl"></i>
