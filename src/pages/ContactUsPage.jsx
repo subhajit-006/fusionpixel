@@ -9,7 +9,7 @@ function ContactUsPage() {
             {/*Navbar*/}
             <Navbar />
 
-            <div className="flex items-center justify-between px-20 h-[83vh]">
+            <div className="flex items-center justify-between px-20 h-[83vh] bg-[url('/assets/contactBg.png')] bg-cover bg-center">
                 {/*Contact Us Content*/}
                 <ContactUsContent />
 

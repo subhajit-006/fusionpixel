@@ -9,7 +9,7 @@ function Navbar(){
             </div>
             <ul className="flex gap-8 text-lg font-medium">
                 <li>Home</li>
-                <li>Services <i class="fa-solid fa-caret-down"></i></li>
+                <li>Services <i className="fa-solid fa-caret-down"></i></li>
                 <li>Orders</li>
                 <li>Contact Us</li>
                 <li>Your Account</li>
