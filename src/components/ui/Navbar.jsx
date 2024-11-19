@@ -10,13 +10,11 @@ function Navbar() {
 
   return (
     <div className="flex justify-between px-14 py-5 bg-white shadow-md">
-      {/* Logo Section */}
       <div className="flex items-center gap-2">
         <img src={logo} alt="logo" className="w-10 h-10" />
         <p className="text-3xl font-bold">FusionPixel</p>
       </div>
 
-      {/* Navigation Menu */}
       <ul className="flex gap-8 text-lg font-medium items-center">
         <li>Home</li>
         <li
@@ -26,12 +24,12 @@ function Navbar() {
           Services <i className="fa-solid fa-caret-down"></i>
           {/* Dropdown Menu */}
           {isDropdownOpen && (
-            <ul className="absolute top-full left-0 bg-white shadow-lg rounded-md mt-2 w-40 text-gray-700">
+            <ul className="absolute top-full left-0 bg-white shadow-lg rounded-md mt-2 w-40 text-gray-700 text-lg">
               {["Web Development", "App Development", "SEO Services"].map((service, index) => (
                 <li
                   key={index}
                   className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                  onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
+                  onClick={() => setIsDropdownOpen(false)} 
                 >
                   {service}
                 </li>
