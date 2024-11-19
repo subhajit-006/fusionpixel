@@ -1,20 +1,49 @@
-import logo from "../../assets/logo.png"
+import React, { useState } from "react";
+import logo from "../../assets/logo.png";
 
-function Navbar(){
-    return(
-        <div className="flex justify-between px-14 py-5">
-            <div className="flex items-center gap-2">
-                <img src={logo} alt="logo" className="size-10" />
-                <p className="text-3xl font-bold">FusionPixel</p>
-            </div>
-            <ul className="flex gap-8 text-lg font-medium">
-                <li>Home</li>
-                <li>Services <i className="fa-solid fa-caret-down"></i></li>
-                <li>Contact Us</li>
-                <li>About Us</li>
+function Navbar() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  return (
+    <div className="flex justify-between px-14 py-5 bg-white shadow-md">
+      {/* Logo Section */}
+      <div className="flex items-center gap-2">
+        <img src={logo} alt="logo" className="w-10 h-10" />
+        <p className="text-3xl font-bold">FusionPixel</p>
+      </div>
+
+      {/* Navigation Menu */}
+      <ul className="flex gap-8 text-lg font-medium items-center">
+        <li>Home</li>
+        <li
+          className="relative cursor-pointer"
+          onClick={toggleDropdown}
+        >
+          Services <i className="fa-solid fa-caret-down"></i>
+          {/* Dropdown Menu */}
+          {isDropdownOpen && (
+            <ul className="absolute top-full left-0 bg-white shadow-lg rounded-md mt-2 w-40 text-gray-700">
+              {["Web Development", "App Development", "SEO Services"].map((service, index) => (
+                <li
+                  key={index}
+                  className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                  onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
+                >
+                  {service}
+                </li>
+              ))}
             </ul>
-        </div>
-    )
+          )}
+        </li>
+        <li>Contact Us</li>
+        <li>About Us</li>
+      </ul>
+    </div>
+  );
 }
 
 export default Navbar;
