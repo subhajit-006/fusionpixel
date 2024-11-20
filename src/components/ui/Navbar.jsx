@@ -24,8 +24,8 @@ function Navbar() {
           Services <i className="fa-solid fa-caret-down"></i>
           {/* Dropdown Menu */}
           {isDropdownOpen && (
-            <ul className="absolute top-full left-0 bg-white shadow-lg rounded-md mt-2 w-40 text-gray-700 text-lg">
-              {["Web Development", "App Development", "SEO Services"].map((service, index) => (
+            <ul className="absolute top-full left-0 bg-white shadow-lg rounded-md mt-2 w-40 text-gray-700 text-sm">
+              {["Web Development", "Web Designing","Graphics Designing", "Photo Editing", "Video Editing", "Photo & Video Shoot"].map((service, index) => (
                 <li
                   key={index}
                   className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
