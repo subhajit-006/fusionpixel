@@ -10,19 +10,27 @@ function AuthCard() {
                 </div>
                 <div>
                     <p>Name</p>
-                    <input type="name" className="border"/>
+                    <input type="text" name="name" className="border" />
                 </div>
                 <div>
                     <p>Email</p>
-                    <input type="email" className="border" />
+                    <input type="text" name="email" className="border" />
                 </div>
                 <div>
                     <p>Password</p>
-                    <input type="password" className="border" />
+                    <input type="text" name="password" className="border" />
                 </div>
                 <div>
-                    <p>Confirm Passeword</p>
-                    <input type="Confirm Password" className="border" />
+                    <p>Confirm Password</p>
+                    <input type="text" name="Confirm Password" className="border" />
+                    <div className="flex items-center gap-2">
+                        <p>Show Password</p>
+                        <input type="checkbox" className="size-[14px]" />
+                    </div>
+                </div>
+                <div>
+                    <button>Sign Up</button>
+                    <p>Already Have an account? <a href="">Log In</a></p>
                 </div>
             </div>
             <div>
