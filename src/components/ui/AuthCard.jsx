@@ -3,24 +3,22 @@ import AuthPageRefImg from "../../assets/AuthPageImg.jpeg";
 
 function AuthCard() {
     const [activeTab, setActiveTab] = useState("signup"); // 'login' or 'signup'
+    const [showPassword, setShowPassword] = useState(false); // Visibility toggle
 
     return (
         <div className="h-[87vh] flex justify-between p-20">
-
             {/* AuthCard */}
             <div className="shadow-[20px_20px_60px_#aaaaaa,-20px_-20px_60px_#ffffff] rounded-xl p-5 flex flex-col items-center gap-2 h-[69vh]">
                 {/* Tabs */}
                 <div className="relative flex justify-between w-80 p-1 font-medium gap-10">
                     <div
-                        className={`cursor-pointer w-1/2 text-center ${activeTab === "login" ? "text-black" : "text-gray-500"
-                            }`}
+                        className={`cursor-pointer w-1/2 text-center ${activeTab === "login" ? "text-black" : "text-gray-500"}`}
                         onClick={() => setActiveTab("login")}
                     >
                         Log In
                     </div>
                     <div
-                        className={`cursor-pointer w-1/2 text-center ${activeTab === "signup" ? "text-black" : "text-gray-500"
-                            }`}
+                        className={`cursor-pointer w-1/2 text-center ${activeTab === "signup" ? "text-black" : "text-gray-500"}`}
                         onClick={() => setActiveTab("signup")}
                     >
                         Sign Up
@@ -28,14 +26,13 @@ function AuthCard() {
 
                     {/* Underline */}
                     <div
-                        className={`absolute bottom-0 h-[2.5px] bg-black transition-all duration-300 ease-in-out`}
+                        className="absolute bottom-0 h-[2.5px] bg-black transition-all duration-300 ease-in-out"
                         style={{
                             width: "50%",
                             transform: activeTab === "login" ? "translateX(0)" : "translateX(100%)",
                         }}
                     ></div>
                 </div>
-
 
                 {/* Form */}
                 {activeTab === "signup" ? (
@@ -51,14 +48,27 @@ function AuthCard() {
                         </div>
                         <div className="flex flex-col gap-1">
                             <p>Password</p>
-                            <input type="password" name="password" className="border p-2 w-96 rounded" />
+                            <input
+                                type={showPassword ? "text" : "password"}
+                                name="password"
+                                className="border p-2 w-96 rounded"
+                            />
                         </div>
                         <div className="flex flex-col gap-1">
                             <p>Confirm Password</p>
-                            <input type="password" name="confirm_password" className="border p-2 w-96 rounded" />
+                            <input
+                                type={showPassword ? "text" : "password"}
+                                name="confirm_password"
+                                className="border p-2 w-96 rounded"
+                            />
                             <div className="flex items-center gap-2 justify-end">
                                 <p>Show Password</p>
-                                <input type="checkbox" className="size-[14px]" />
+                                <input
+                                    type="checkbox"
+                                    className="size-[14px]"
+                                    checked={showPassword}
+                                    onChange={(e) => setShowPassword(e.target.checked)}
+                                />
                             </div>
                         </div>
                         <button className="border-2 border-black w-96 p-1 rounded font-medium bg-black text-white mt-5 hover:bg-black/80 hover:border-black/80">
@@ -83,11 +93,20 @@ function AuthCard() {
                         </div>
                         <div className="flex flex-col gap-1">
                             <p>Password</p>
-                            <input type="password" name="password" className="border p-2 w-96 rounded" />
+                            <input
+                                type={showPassword ? "text" : "password"}
+                                name="password"
+                                className="border p-2 w-96 rounded"
+                            />
                         </div>
                         <div className="flex items-center gap-2 justify-end w-96">
                             <p>Show Password</p>
-                            <input type="checkbox" className="size-[14px]" />
+                            <input
+                                type="checkbox"
+                                className="size-[14px]"
+                                checked={showPassword}
+                                onChange={(e) => setShowPassword(e.target.checked)}
+                            />
                         </div>
                         <button className="border-2 border-black w-96 p-1 rounded font-medium bg-black text-white mt-5 hover:bg-black/80 hover:border-black/80">
                             Log In
