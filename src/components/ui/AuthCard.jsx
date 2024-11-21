@@ -61,7 +61,7 @@ function AuthCard() {
                                 <input type="checkbox" className="size-[14px]" />
                             </div>
                         </div>
-                        <button className="border-2 border-black w-96 p-1 rounded font-medium bg-black text-white mt-5">
+                        <button className="border-2 border-black w-96 p-1 rounded font-medium bg-black text-white mt-5 hover:bg-black/80 hover:border-black/80">
                             Sign Up
                         </button>
                         <p className="text-xs flex justify-center gap-1">
