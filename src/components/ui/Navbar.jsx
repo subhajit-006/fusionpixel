@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -12,11 +13,11 @@ function Navbar() {
     <div className="flex justify-between px-14 py-5 bg-white shadow-md">
       <div className="flex items-center gap-2">
         <img src={logo} alt="logo" className="w-10 h-10" />
-        <p className="text-3xl font-bold">FusionPixel</p>
+        <p className="text-3xl font-bold"><Link to='/'>FusionPixel</Link></p>
       </div>
 
       <ul className="flex gap-8 text-lg font-medium items-center">
-        <li>Home</li>
+        <li className="cursor-pointer"><Link to='/Home'>Home</Link></li>
         <li
           className="relative cursor-pointer"
           onClick={toggleDropdown}
@@ -37,8 +38,8 @@ function Navbar() {
             </ul>
           )}
         </li>
-        <li>Contact Us</li>
-        <li>About Us</li>
+        <li className="cursor-pointer"><Link to='/ContactUsPage'>Contact Us</Link></li>
+        <li className="cursor-pointer">About Us</li>
       </ul>
     </div>
   );

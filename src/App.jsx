@@ -1,3 +1,4 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { useState } from 'react'
 import './App.css'
 import HomePage from './pages/HomePage'
@@ -6,10 +7,24 @@ import AuthPage from "./pages/AuthPage"
 import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <HomePage />,
+    },
+    {
+      path: '/Home',
+      element: <HomePage />
+    },
+    {
+      path: 'ContactUsPage',
+      element: <ContactUsPage />
+    }
+  ])
 
   return (
     <>
-      <HomePage />
+      <RouterProvider router={router}/>
     </>
   )
 }
