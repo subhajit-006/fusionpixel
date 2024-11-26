@@ -9,8 +9,7 @@ function App() {
 
   return (
     <>
-      {/*<HomePage />*/}
-      <NotFoundPage />
+      <HomePage />
     </>
   )
 }

@@ -11,11 +11,11 @@ function NotFoundContent() {
             </div>
 
             <div className="flex gap-5 font-medium">
-                <button className="text-white border-[1.6px] border-black py-2 px-3 rounded flex gap-2 justify-center items-center bg-black hover:bg-black/85 hover:border-black/85">
-                    <i class="fa-solid fa-house"></i>
+                <button className="text-white border-[1.5px] border-black py-2 px-3 rounded flex gap-2 justify-center items-center bg-black hover:bg-black/85 hover:border-black/85">
+                    <i className="fa-solid fa-house"></i>
                     Back To Home
                 </button>
-                <button className="border-[1.6px] border-black/20 py-2 px-4 rounded hover:bg-black/5">
+                <button className="border-[1.5px] border-black/20 py-2 px-4 rounded hover:bg-black/5">
                     Contact Support
                 </button>
             </div>
