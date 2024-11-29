@@ -7,8 +7,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        fontNeue: ["Bebas Neue"],
-        fontRal: ["Raleway"],
+        fontNeue: [" Bebas Neue "],
+        fontRal: [" Raleway "],
+        fontProtest: [" Protest Revolution "],
+        fontCin: [" Cinzel "]
       }
     },
   },
