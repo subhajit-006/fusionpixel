@@ -24,13 +24,16 @@ function App() {
     {
       path: 'AuthPage',
       element: <AuthPage />
+    },
+    {
+      path: 'AboutUsPage',
+      element: <AboutUsPage />
     }
   ])
 
   return (
     <>
-      {/*<RouterProvider router={router}/>*/}
-      <AboutUsPage />
+      <RouterProvider router={router}/>
     </>
   )
 }

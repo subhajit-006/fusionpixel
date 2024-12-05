@@ -39,7 +39,7 @@ function Navbar() {
           )}
         </li>
         <li className="cursor-pointer"><Link to='/ContactUsPage'>Contact Us</Link></li>
-        <li className="cursor-pointer">About Us</li>
+        <li className="cursor-pointer"><Link to="/AboutUsPage">About Us</Link></li>
         <li className="border-2 py-2 px-4 border-[#2e2e2e] bg-[#2e2e2e] text-white rounded-full">
           <button><Link to="/AuthPage">Log In</Link></button>
         </li>
