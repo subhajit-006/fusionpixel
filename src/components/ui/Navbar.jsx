@@ -40,6 +40,12 @@ function Navbar() {
         </li>
         <li className="cursor-pointer"><Link to='/ContactUsPage'>Contact Us</Link></li>
         <li className="cursor-pointer">About Us</li>
+        <li className="border-2 py-2 px-4 border-[#2e2e2e] bg-[#2e2e2e] text-white rounded-full">
+          <button><Link to="/AuthPage">Log In</Link></button>
+        </li>
+        <li className="border-2 py-2 px-3 rounded-full border-[#2e2e2e]">
+          <button><Link to="/AuthPage">Sign Up</Link></button>
+        </li>
       </ul>
     </div>
   );
