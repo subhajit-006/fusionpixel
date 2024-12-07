@@ -26,16 +26,24 @@ function Navbar() {
           {/* Dropdown Menu */}
           {isDropdownOpen && (
             <ul className="absolute top-full left-0 bg-white shadow-lg rounded-md mt-2 w-40 text-gray-700 text-sm">
-              {["Web Development", "Web Designing","Graphics Designing", "Photo Editing", "Video Editing", "Photo & Video Shoot"].map((service, index) => (
-                <li
-                  key={index}
-                  className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                  onClick={() => setIsDropdownOpen(false)} 
-                >
-                  {service}
-                </li>
-              ))}
-            </ul>
+            {[
+              { name: "Web Development", path: "/WebDevPage" },
+              { name: "Web Designing", path: "/WebDesigningPage" },
+              { name: "Graphics Designing", path: "/GraphicsDesigningPage" },
+              { name: "Photo Editing", path: "/PhotoEditingPage" },
+              { name: "Video Editing", path: "/VideoEditingPage" },
+              { name: "Photo & Video Shoot", path: "/PhotoAndVideoShootPage" },
+            ].map((service, index) => (
+              <li
+                key={index}
+                className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+              >
+                <Link to={service.path} onClick={() => setIsDropdownOpen(false)}>
+                  {service.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
           )}
         </li>
         <li className="cursor-pointer"><Link to='/ContactUsPage'>Contact Us</Link></li>
