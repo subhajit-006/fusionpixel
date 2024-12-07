@@ -34,7 +34,7 @@ function WebDevPage() {
                 </div>
 
                 <div className="flex justify-between items-center p-20 h-[75vh]">
-                    <div>
+                    <div className="flex flex-col gap-2">
                         <h1 className="text-5xl font-bold">Why Choose FusionPixel?</h1>
 
                         <div className="flex flex-col gap-1 text-lg text-gray-700">
@@ -50,7 +50,7 @@ function WebDevPage() {
                     </div>
                 </div>
 
-                <div className="flex justify-between items-center p-20">
+                <div id="contact" className="flex justify-between items-center p-20">
                     {/*ContactUsCard*/}
                     <ContactCard />
                     <div className="flex flex-col gap-2">
