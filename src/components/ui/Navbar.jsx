@@ -13,7 +13,7 @@ function Navbar() {
     <div className="flex justify-between px-14 py-5 bg-white shadow-md">
       <div className="flex items-center gap-2">
         <img src={logo} alt="logo" className="w-10 h-10" />
-        <p className="text-3xl font-bold"><Link to='/'>FusionPixel</Link></p>
+        <p className="text-3xl font-bold"><Link to='/'>FushionPixel</Link></p>
       </div>
 
       <ul className="flex gap-8 text-lg font-medium items-center">
