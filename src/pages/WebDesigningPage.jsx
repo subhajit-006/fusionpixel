@@ -38,10 +38,10 @@ function WebDesigningPage() {
                         <h1 className="text-5xl font-bold">Why Choose FusionPixel?</h1>
 
                         <ul className="flex flex-col gap-1 text-lg text-gray-700">
-                            <li className="flex gap-2"><i className="fa-solid fa-desktop text-2xl"></i>  Stunning, modern designs that capture your brand essence</li>
-                            <li className="flex gap-4"><i className="fa-solid fa-mobile text-2xl"></i>  Responsive layouts that work seamlessly across all devices</li>
-                            <li className="flex gap-3"><i className="fa-solid fa-bolt text-2xl"></i>  Focus on user experience and conversion optimization</li>
-                            <li className="flex gap-2"><i className="fa-solid fa-pen-nib text-2xl"></i>  Custom illustrations and graphics to make your site unique</li>
+                            <li className="flex gap-2 items-center"><i className="fa-solid fa-desktop text-2xl"></i>  Stunning, modern designs that capture your brand essence</li>
+                            <li className="flex gap-4 items-center"><i className="fa-solid fa-mobile text-2xl"></i>  Responsive layouts that work seamlessly across all devices</li>
+                            <li className="flex gap-3 items-center"><i className="fa-solid fa-bolt text-2xl"></i>  Focus on user experience and conversion optimization</li>
+                            <li className="flex gap-2 items-center"><i className="fa-solid fa-pen-nib text-2xl"></i>  Custom illustrations and graphics to make your site unique</li>
                         </ul>
                     </div>
 

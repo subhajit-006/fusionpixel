@@ -36,10 +36,10 @@ function VideoEditingPage() {
                         <h1 className="text-5xl font-bold">Why Choose FusionPixel?</h1>
 
                         <div className="flex flex-col gap-1 text-lg text-gray-700">
-                            <p className="flex gap-2"><i className="fa-regular fa-star text-2xl"></i>  Expert editors with years of industry experience</p>
-                            <p className="flex gap-3"><i className="fa-solid fa-bolt text-2xl"></i>  Fast turnaround times without compromising qualitys</p>
-                            <p className="flex gap-2"><i className="fa-solid fa-layer-group text-2xl"></i>  Customized editing to match your vision and style</p>
-                            <p className="flex gap-2"><i className="fa-solid fa-music text-2xl"></i>  Access to a vast library of royalty-free music and sound effects</p>
+                            <p className="flex gap-2 items-center"><i className="fa-regular fa-star text-2xl"></i>  Expert editors with years of industry experience</p>
+                            <p className="flex gap-3 items-center"><i className="fa-solid fa-bolt text-2xl"></i>  Fast turnaround times without compromising qualitys</p>
+                            <p className="flex gap-2 items-center"><i className="fa-solid fa-layer-group text-2xl"></i>  Customized editing to match your vision and style</p>
+                            <p className="flex gap-2 items-center"><i className="fa-solid fa-music text-2xl"></i>  Access to a vast library of royalty-free music and sound effects</p>
                         </div>
                     </div>
 
