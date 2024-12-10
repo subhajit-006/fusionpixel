@@ -24,7 +24,7 @@ function Footer() {
                     <li className="text-sm">Made With FushinPixel Labs</li>
                 </ul>
 
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-3 items-start">
                     <div className="flex items-center gap-2">
                         <img src={logo} alt="logo" className="w-10 h-10" />
                         <p className="text-3xl font-bold">
@@ -32,30 +32,20 @@ function Footer() {
                         </p>
                     </div>
 
-                    <div className="flex gap-1">
+                    <div className="flex gap-2">
                         <div className="border-[1.6px] border-black/35 px-2 py-1 rounded-md">
                             <a href="mailto:fushionpixellabs@gmail.com">
                                 <i className="fa-regular fa-envelope text-2xl"></i>
                             </a>
                         </div>
-                        <div className="border-[1.6px] border-black/35 px-[6px] py-1 rounded-md">
-                            <a href="">
-                                <i className="fa-brands fa-discord text-2xl"></i>
-                            </a>
-                        </div>
                         <div className="border-[1.6px] border-black/35 px-[10px] py-1 rounded-md">
-                            <a href="">
+                            <a href="https://www.instagram.com/fushionpixellabs">
                                 <i className="fa-brands fa-instagram text-2xl"></i>
                             </a>
                         </div>
                         <div className="border-[1.6px] border-black/35 px-2 py-1 rounded-md">
-                            <a href="">
+                            <a href="https://www.facebook.com/profile.php?id=100085668723244&sfnsn=wiwspwa&mibextid=RUbZ1f">
                                 <i className="fa-brands fa-facebook text-2xl"></i>
-                            </a>
-                        </div>
-                        <div className="border-[1.6px] border-black/35 px-2 py-1 rounded-md">
-                            <a href="">
-                            <i className="fa-brands fa-twitter text-2xl"></i>
                             </a>
                         </div>
                         <div className="border-[1.6px] border-black/35 px-2 py-1 rounded-md">
