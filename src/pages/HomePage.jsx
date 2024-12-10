@@ -13,7 +13,7 @@ function HomePage() {
                 <div className="flex flex-col items-center justify-center gap-4 h-[88vh]">
 
                     <h1 className="text-6xl font-bold">
-                        Welcome to FusionPixelLab
+                        Welcome to FusionPixelLabs
                     </h1>
                     <p className="text-xl text-gray-700">
                         Transform your digital imagery with our cutting-edge pixel manipulation services.
