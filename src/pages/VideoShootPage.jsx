@@ -4,7 +4,7 @@ import ContactCard from "../components/ui/ContactCrad";
 import vh1 from "../assets/services/vh1.mp4"
 import vh2 from "../assets/services/vh2.mp4"
 
-function VideoEditingPage() {
+function VideoShootPage() {
     return (
         <>
             {/*Navbar*/}
@@ -65,4 +65,4 @@ function VideoEditingPage() {
     )
 }
 
-export default VideoEditingPage;
+export default VideoShootPage;

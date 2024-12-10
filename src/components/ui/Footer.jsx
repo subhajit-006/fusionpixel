@@ -9,18 +9,18 @@ function Footer() {
             <div className="flex items-start justify-evenly p-3 text-black/60">
                 <ul className="flex flex-col gap-1">
                     <li className="font-semibold">Services</li>
-                    <li className="text-sm"><Link to=''>Photo Shoot</Link></li>
-                    <li className="text-sm"><Link to=''>Video Shoot</Link></li>
-                    <li className="text-sm"><Link to=''>Photo & Video Editing</Link></li>
-                    <li className="text-sm"><Link to=''>Graphics Designing</Link></li>
-                    <li className="text-sm"><Link to=''>Website Making</Link></li>
-                    <li className="text-sm"><Link to=''>Web Designing</Link></li>
+                    <li className="text-sm"><Link to='/PhotoShootPage'>Photo Shoot</Link></li>
+                    <li className="text-sm"><Link to='/VideoShootPage'>Video Shoot</Link></li>
+                    <li className="text-sm"><Link to='/PhotoAndVideoEditingPage'>Photo & Video Editing</Link></li>
+                    <li className="text-sm"><Link to='/GraphicsDesigningPage'>Graphics Designing</Link></li>
+                    <li className="text-sm"><Link to='/WebDevPage'>Website Making</Link></li>
+                    <li className="text-sm"><Link to='/WebDesigningPage'>Web Designing</Link></li>
                 </ul>
 
                 <ul className="flex flex-col gap-1">
                     <li className="font-semibold">FushinPixelLabs</li>
-                    <li className="text-sm"><Link to=''>About Us</Link></li>
-                    <li className="text-sm"><Link to=''>Contact Us</Link></li>
+                    <li className="text-sm"><Link to='/AboutUsPage'>About Us</Link></li>
+                    <li className="text-sm"><Link to='/ContactUsPage'>Contact Us</Link></li>
                     <li className="text-sm">Made With FushinPixel Labs</li>
                 </ul>
 

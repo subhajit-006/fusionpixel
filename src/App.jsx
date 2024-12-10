@@ -8,9 +8,9 @@ import AboutUsPage from "./pages/AboutUsPage"
 import WebDevPage from "./pages/WebDevPage"
 import WebDesigningPage from "./pages/WebDesigningPage"
 import GraphicsDesigningPage from "./pages/GraphicsDesigningPage"
-import PhotoEditingPage from "./pages/PhotoEditingPage"
-import VideoEditingPage from "./pages/VideoEditingPage"
-import PhotoAndVideoShootPage from "./pages/PhotoAndVideoShootPage"
+import PhotoShootPage from "./pages/PhotoShootPage"
+import VideoShootPage from "./pages/VideoShootPage"
+import PhotoAndVideoEditingPage from "./pages/PhotoAndVideoEditingPage"
 
 function App() {
   const router = createBrowserRouter([
@@ -47,16 +47,16 @@ function App() {
       element: <GraphicsDesigningPage />
     },
     {
-      path: 'PhotoEditingPage',
-      element: <PhotoEditingPage />
+      path: 'PhotoShootPage',
+      element: <PhotoShootPage />
     },
     {
-      path: 'VideoEditingPage',
-      element: <VideoEditingPage />
+      path: 'VideoShootPage',
+      element: <VideoShootPage />
     },
     {
-      path: 'PhotoAndVideoShootPage',
-      element: <PhotoAndVideoShootPage />
+      path: 'PhotoAndVideoEditingPage',
+      element: <PhotoAndVideoEditingPage />
     }
   ])
 
