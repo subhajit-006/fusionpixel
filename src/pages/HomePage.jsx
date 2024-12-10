@@ -7,6 +7,7 @@ import Footer from "../components/ui/Footer";
 function HomePage() {
     return (
         <>
+        
             <div className="bg-gradient-to-l from-[#5170ff] to-[#ff66c4]">
                 <Navbar />
                 <div className="flex flex-col items-center justify-center gap-4 h-[88vh]">
