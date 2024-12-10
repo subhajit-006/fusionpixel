@@ -2,10 +2,12 @@ import Navbar from "../components/ui/Navbar";
 import Footer from "../components/ui/Footer";
 import ContactCard from "../components/ui/ContactCrad";
 import ContactUsContent from "../components/ContactUsContent";
+import Cursor from "../components/ui/Cursor";
 
 function ContactUsPage() {
     return (
         <>
+            <Cursor />
             {/*Navbar*/}
             <Navbar />
 

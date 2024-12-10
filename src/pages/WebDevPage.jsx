@@ -3,10 +3,12 @@ import Footer from "../components/ui/Footer";
 import ContactCard from "../components/ui/ContactCrad";
 import portfolio from "../assets/services/portfolio.png"
 import TrackWay from "../assets/services/TrackWay.png"
+import Cursor from "../components/ui/Cursor";
 
 function WebDevPage() {
     return (
         <>
+            <Cursor />
             {/*Navbar*/}
             <Navbar />
 

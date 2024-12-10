@@ -3,10 +3,12 @@ import Footer from "../components/ui/Footer";
 import ContactCard from "../components/ui/ContactCrad";
 import portfolio from "../assets/services/portfolio.png"
 import intern from "../assets/services/intern.png"
+import Cursor from "../components/ui/Cursor";
 
 function WebDesigningPage() {
     return (
         <>
+            <Cursor />
             {/*Navbar*/}
             <Navbar />
 

@@ -10,7 +10,7 @@ function Navbar() {
         <div className="flex items-center gap-2">
           <img src={logo} alt="logo" className="w-10 h-10" />
           <p className="text-3xl font-bold">
-            <Link to="/">FushionPixelLabs</Link>
+            <Link to="/">FushionPixellabs</Link>
           </p>
         </div>
 

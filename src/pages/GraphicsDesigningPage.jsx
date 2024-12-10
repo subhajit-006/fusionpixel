@@ -2,10 +2,12 @@ import Navbar from "../components/ui/Navbar";
 import Footer from "../components/ui/Footer";
 import ContactCard from "../components/ui/ContactCrad";
 import gd from "../assets/services/gd.png"
+import Cursor from "../components/ui/Cursor";
 
 function GraphicsDesigningPage() {
     return (
         <>
+            <Cursor />
             {/*Navbar*/}
             <Navbar />
 

@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import Footer from "../components/ui/Footer"
 import Nabvar from "../components/ui/Navbar"
+import Cursor from "../components/ui/Cursor";
 
 function ServicePage() {
     return (
         <>
+            <Cursor />
             <Nabvar />
             <div className="h-[100h] flex flex-col justify-center gap-10 py-16">
                 <div>

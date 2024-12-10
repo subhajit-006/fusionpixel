@@ -6,10 +6,12 @@ import ph3 from "../assets/services/ph3.jpg"
 import v1 from "../assets/services/v1.mp4"
 import v2 from "../assets/services/v2.mp4"
 import ph2 from "../assets/services/ph2.jpg"
+import Cursor from "../components/ui/Cursor";
 
 function PhotoAndVideoEditingPage() {
     return (
         <>
+            <Cursor />
             {/*Navbar*/}
             <Navbar />
 

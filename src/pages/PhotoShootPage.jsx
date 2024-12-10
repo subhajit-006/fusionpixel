@@ -4,10 +4,12 @@ import ContactCard from "../components/ui/ContactCrad";
 import ph1 from "../assets/services/ph1.jpg"
 import ph2 from "../assets/services/ph2.jpg"
 import ph3 from "../assets/services/ph3.jpg"
+import Cursor from "../components/ui/Cursor";
 
 function PhotoShootPage() {
     return (
         <>
+            <Cursor />
             {/*Navbar*/}
             <Navbar />
 

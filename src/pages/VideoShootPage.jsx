@@ -3,10 +3,12 @@ import Footer from "../components/ui/Footer";
 import ContactCard from "../components/ui/ContactCrad";
 import vh1 from "../assets/services/vh1.mp4"
 import vh2 from "../assets/services/vh2.mp4"
+import Cursor from "../components/ui/Cursor";
 
 function VideoShootPage() {
     return (
         <>
+            <Cursor />
             {/*Navbar*/}
             <Navbar />
 
