@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import Services from "../components/Services";
 import Contact from "../components/Contact";
 import Footer from "../components/ui/Footer";
+import Cursor from "../components/ui/Cursor";
 
 function HomePage() {
     return (
         <>
-        
+        <Cursor />
             <div className="bg-gradient-to-l from-[#5170ff] to-[#ff66c4]">
+                
                 <Navbar />
                 <div className="flex flex-col items-center justify-center gap-4 h-[88vh]">
 
