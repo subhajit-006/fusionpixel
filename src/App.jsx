@@ -12,6 +12,7 @@ import PhotoShootPage from "./pages/PhotoShootPage"
 import VideoShootPage from "./pages/VideoShootPage"
 import PhotoAndVideoEditingPage from "./pages/PhotoAndVideoEditingPage"
 import ServicePage from "./pages/ServicePage"
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage"
 
 function App() {
   const router = createBrowserRouter([
@@ -62,6 +63,10 @@ function App() {
     {
       path: 'ServicePage',
       element: <ServicePage />
+    },
+    {
+      path: 'PrivacyPolicyPage',
+      element: <PrivacyPolicyPage />
     }
   ])
 

@@ -11,7 +11,7 @@ function AboutUsPage() {
             <Cursor />
             <Navbar />
             <div className="h-[45vh] flex justify-center items-center flex-col gap-2 bg-gray-100">
-                <h1 className="text-6xl font-bold">About FusionPixelLabs</h1>
+                <h1 className="text-6xl font-bold">About FusionPixellabs</h1>
                 <p className="text-2xl text-gray-500">Transforming ideas into visual masterpieces since 2024</p>
             </div>
 

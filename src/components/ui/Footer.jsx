@@ -7,6 +7,9 @@ function Footer() {
         <div className="bg-white">
             <div className="h-[1px] bg-black/20"></div>
             <div className="flex items-start justify-evenly p-3 text-black/60">
+                <div>
+                    <p className="flex items-end text-xs h-[23vh] underline"><Link to='/PrivacyPolicyPage'>Privacy & Policies</Link></p>
+                </div>
                 <ul className="flex flex-col gap-1">
                     <li className="font-semibold">Services</li>
                     <li className="text-sm"><Link to='/PhotoShootPage'>Photo Shoot</Link></li>
@@ -50,7 +53,7 @@ function Footer() {
                         </div>
                         <div className="border-[1.6px] border-black/35 px-2 py-1 rounded-md">
                             <a href=" https://x.com/FPixel26863?t=6qldzP4ckeQbG8PaV_40uw&s=08">
-                                <i class="fa-brands fa-twitter text-2xl"></i>
+                                <i className="fa-brands fa-twitter text-2xl"></i>
                             </a>
                         </div>
                         <div className="border-[1.6px] border-black/35 px-2 py-1 rounded-md">
