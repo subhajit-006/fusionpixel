@@ -21,7 +21,11 @@ function Navbar() {
 
   return (
     <div className="xl:sticky xl:top-0 px-14 py-3">
-      <LoadingBar color="#f11946" ref={ref} />
+      <LoadingBar
+        color="#f11946"
+        ref={ref}
+        height={3}
+      />
       <div className="flex z-10 justify-between">
         {/* Left Section - Logo */}
         <div className="flex items-center gap-2">
