@@ -61,6 +61,11 @@ function Footer() {
                                 <i className="fa-solid fa-phone text-2xl"></i>
                             </a>
                         </div>
+                        <div className="border-[1.6px] border-black/35 px-2 py-1 rounded-md">
+                            <a href="https://discord.gg/fkHfVgnA">
+                                <i className="fa-brands fa-discord text-2xl"></i>
+                            </a>
+                        </div>
                     </div>
 
                     <div className="flex flex-col">
