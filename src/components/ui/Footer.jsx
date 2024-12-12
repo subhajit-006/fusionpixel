@@ -12,18 +12,18 @@ function Footer() {
                 </div>
                 <ul className="flex flex-col gap-1">
                     <li className="font-semibold">Services</li>
-                    <li className="text-sm"><Link to='/PhotoShootPage'>Photo Shoot</Link></li>
-                    <li className="text-sm"><Link to='/VideoShootPage'>Video Shoot</Link></li>
-                    <li className="text-sm"><Link to='/PhotoAndVideoEditingPage'>Photo & Video Editing</Link></li>
-                    <li className="text-sm"><Link to='/GraphicsDesigningPage'>Graphics Designing</Link></li>
-                    <li className="text-sm"><Link to='/WebDevPage'>Website Making</Link></li>
-                    <li className="text-sm"><Link to='/WebDesigningPage'>Web Designing</Link></li>
+                    <li className="text-sm hover:underline"><Link to='/PhotoShootPage'>Photo Shoot</Link></li>
+                    <li className="text-sm hover:underline"><Link to='/VideoShootPage'>Video Shoot</Link></li>
+                    <li className="text-sm hover:underline"><Link to='/PhotoAndVideoEditingPage'>Photo & Video Editing</Link></li>
+                    <li className="text-sm hover:underline"><Link to='/GraphicsDesigningPage'>Graphics Designing</Link></li>
+                    <li className="text-sm hover:underline"><Link to='/WebDevPage'>Website Making</Link></li>
+                    <li className="text-sm hover:underline"><Link to='/WebDesigningPage'>Web Designing</Link></li>
                 </ul>
 
                 <ul className="flex flex-col gap-1">
                     <li className="font-semibold">FushinPixelLabs</li>
-                    <li className="text-sm"><Link to='/AboutUsPage'>About Us</Link></li>
-                    <li className="text-sm"><Link to='/ContactUsPage'>Contact Us</Link></li>
+                    <li className="text-sm hover:underline"><Link to='/AboutUsPage'>About Us</Link></li>
+                    <li className="text-sm hover:underline"><Link to='/ContactUsPage'>Contact Us</Link></li>
                     <li className="text-sm">Made With FushinPixel Labs</li>
                 </ul>
 
