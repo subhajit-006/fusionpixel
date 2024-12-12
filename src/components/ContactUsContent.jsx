@@ -16,7 +16,7 @@ function ContactUsContent() {
                 </div>
                 <div className="flex gap-3 items-center">
                     <i className="fa-brands fa-discord text-2xl"></i>
-                    <a href="" className="text-lg">fushionpixellabs</a>
+                    <a href="https://discord.gg/fkHfVgnA" className="text-lg">fushionpixellabs</a>
                 </div>
             </div>
         </div>
