@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Footer from "../components/ui/Footer"
 import Nabvar from "../components/ui/Navbar"
 import Cursor from "../components/ui/Cursor";
+import photoEd from "../assets/background/photoEd.mp4"
 
 function ServicePage() {
     return (
@@ -21,7 +22,8 @@ function ServicePage() {
                                 <i className="fa-solid fa-camera text-4xl"></i>
                                 <h2 className="font-bold text-xl">Photo Shoot</h2>
                                 <p className="text-sm text-black/60 font-normal">Capture your moments with our professional photo shoot services.</p>
-                            </div></Link>
+                            </div>
+                        </Link>
 
                         <Link to='/VideoShootPage'>
                             <div className="w-[25vw] h-[35vh] border-2 rounded-lg border-black/35 text-center flex flex-col justify-center p-4 gap-2 hover:shadow-[18px_18px_15px_-7px_#9ABF80] hover:border-[#9ABF80] hover:border-2 hover:transition duration-300 ease-in-out">
