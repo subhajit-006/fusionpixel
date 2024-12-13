@@ -3,6 +3,7 @@ import Footer from "../components/ui/Footer";
 import ContactCard from "../components/ui/ContactCrad";
 import gd from "../assets/services/gd.png"
 import Cursor from "../components/ui/Cursor";
+import gdi from "../assets/serviceContent/gdi.webp"
 
 function GraphicsDesigningPage() {
     return (
@@ -45,8 +46,8 @@ function GraphicsDesigningPage() {
                         </div>
                     </div>
 
-                    <div className="w-[40vw] border-2 border-black h-[40vh] rounded-2xl text-center">
-                        ANY IMAGE
+                    <div className="w-[40vw] h-[40vh] rounded-2xl text-center">
+                        <img src={gdi} alt="gd" className="rounded-xl"/>
                     </div>
                 </div>
 

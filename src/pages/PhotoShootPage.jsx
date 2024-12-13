@@ -6,6 +6,7 @@ import ph1 from "../assets/services/ph1.jpg";
 import ph2 from "../assets/services/ph2.jpg";
 import ph3 from "../assets/services/ph3.jpg";
 import Cursor from "../components/ui/Cursor";
+import ps from "../assets/serviceContent/ps.png"
 
 function PhotoShootPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -78,8 +79,8 @@ function PhotoShootPage() {
                         </div>
                     </div>
 
-                    <div className="w-[40vw] border-2 border-black h-[40vh] rounded-2xl text-center">
-                        ANY IMAGE
+                    <div className="pr-20">
+                        <img src={ps} alt="ps"  className="rounded-2xl h-[60vh]"/>
                     </div>
                 </div>
 

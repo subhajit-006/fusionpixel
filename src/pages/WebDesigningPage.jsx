@@ -4,6 +4,7 @@ import ContactCard from "../components/ui/ContactCrad";
 import portfolio from "../assets/services/portfolio.png"
 import intern from "../assets/services/intern.png"
 import Cursor from "../components/ui/Cursor";
+import wd from "../assets/serviceContent/wd.webp"
 
 function WebDesigningPage() {
     return (
@@ -51,8 +52,8 @@ function WebDesigningPage() {
                         </ul>
                     </div>
 
-                    <div className="w-[40vw] border-2 border-black h-[40vh] rounded-2xl text-center">
-                        ANY IMAGE
+                    <div className="w-[40vw] h-[40vh] text-center">
+                        <img src={wd} alt="wd" className=" rounded-2xl"/>
                     </div>
                 </div>
 

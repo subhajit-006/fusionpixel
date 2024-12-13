@@ -1,9 +1,9 @@
 function ContactUsContent() {
     return (
         <div className="flex flex-col gap-5">
-            <h1 className="text-6xl font-bold">Contact Us</h1>
-            <p className="text-xl">Get in touch with our team for any inquiries or to start your project.</p>
-            <div className="flex flex-col gap-3">
+            <h1 className="text-6xl font-bold font-fontProtest">Contact Us</h1>
+            <p className="text-xl font-fontDyan font-thin">Get in touch with our team for any inquiries or to start your project.</p>
+            <div className="flex flex-col gap-3 font-fontDyan font-thin">
                 <div className="flex gap-32">
                     <div className="flex gap-3 items-center">
                         <i className="fa-regular fa-envelope text-2xl"></i>

@@ -4,6 +4,7 @@ import ContactCard from "../components/ui/ContactCrad";
 import portfolio from "../assets/services/portfolio.png"
 import TrackWay from "../assets/services/TrackWay.png"
 import Cursor from "../components/ui/Cursor";
+import wdev from "../assets/serviceContent/wdev.webp"
 
 function WebDevPage() {
     return (
@@ -58,8 +59,8 @@ function WebDevPage() {
                         </div>
                     </div>
 
-                    <div className="w-[40vw] border-2 border-black h-[40vh] rounded-2xl text-center">
-                        ANY IMAGE
+                    <div className="w-[40vw] h-[40vh] text-center">
+                        <img src={wdev} alt="wdev" className="rounded-2xl"/>
                     </div>
                 </div>
 

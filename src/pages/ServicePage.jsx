@@ -94,7 +94,7 @@ function ServicePage() {
 
                     <div className="flex text-center p-2 items-center justify-evenly gap-5">
                         <Link to="/GraphicsDesigningPage">
-                            <div className="relative w-[25vw] h-[35vh] bg-[#ecf9f4] hover:text-white text-center flex flex-col justify-center p-4 gap-2 border-2 rounded-lg border-black/35 hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105 overflow-hidden group">
+                            <div className="relative w-[25vw] h-[35vh] mb-5 bg-[#ecf9f4] hover:text-white text-center flex flex-col justify-center p-4 gap-2 border-2 rounded-lg border-black/35 hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105 overflow-hidden group">
                                 {/* Background Video */}
                                 <video
                                     className="absolute top-0 left-0 w-full h-full opacity-0 object-cover -z-10 transition-opacity duration-300 group-hover:opacity-100"

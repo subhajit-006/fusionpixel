@@ -30,7 +30,7 @@ function Footer() {
                 <div className="flex flex-col gap-3 items-start">
                     <div className="flex items-center gap-2">
                         <img src={logo} alt="logo" className="w-10 h-10" />
-                        <p className="text-3xl font-bold">
+                        <p className="text-4xl font-bold font-fontRou">
                             <Link to="/">FushionPixelLabs</Link>
                         </p>
                     </div>

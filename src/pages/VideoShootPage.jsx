@@ -4,6 +4,7 @@ import ContactCard from "../components/ui/ContactCrad";
 import vh1 from "../assets/services/vh1.mp4"
 import vh2 from "../assets/services/vh2.mp4"
 import Cursor from "../components/ui/Cursor";
+import vs from "../assets/serviceContent/vs.png"
 
 function VideoShootPage() {
     return (
@@ -19,7 +20,7 @@ function VideoShootPage() {
                     <a
                         href="#contact"
                         className="group border-2 font-fontDyan font-light border-black text-lg py-2 px-3 rounded-full bg-black text-white transition-transform duration-300 transform hover:scale-105">
-                        Order 
+                        Order
                         <i className="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-2"></i>
                     </a>
 
@@ -50,8 +51,8 @@ function VideoShootPage() {
                         </div>
                     </div>
 
-                    <div className="w-[40vw] border-2 border-black h-[40vh] rounded-2xl text-center">
-                        ANY IMAGE
+                    <div className="pr-20">
+                        <img src={vs} alt="vs" className="rounded-2xl h-[60vh]" />
                     </div>
                 </div>
 

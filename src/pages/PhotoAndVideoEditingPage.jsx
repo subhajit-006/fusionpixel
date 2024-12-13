@@ -8,6 +8,7 @@ import v1 from "../assets/services/v1.mp4";
 import v2 from "../assets/services/v2.mp4";
 import ph2 from "../assets/services/ph2.jpg";
 import Cursor from "../components/ui/Cursor";
+import pve from "../assets/serviceContent/pve.webp"
 
 function PhotoAndVideoEditingPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -95,8 +96,8 @@ function PhotoAndVideoEditingPage() {
             </div>
           </div>
 
-          <div className="w-[40vw] border-2 border-black h-[40vh] rounded-2xl text-center">
-            ANY IMAGE
+          <div className="w-[40vw] h-[40vh]  text-center">
+            <img src={pve} alt="pve" className="rounded-2xl"/>
           </div>
         </div>
 
