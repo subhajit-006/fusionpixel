@@ -8,15 +8,19 @@ function GraphicsDesigningPage() {
     return (
         <>
             <Cursor />
-            {/*Navbar*/}
+
+            <div className="bg-[#DFF2EB]">
             <Navbar />
-
-            <div>
-
                 <div className="flex justify-center items-center flex-col gap-3 h-96">
                     <h1 className="font-bold text-6xl font-fontProtest">Graphics Designing Services</h1>
                     <p className="text-gray-700 text-xl">Bringing your ideas to life with stunning visuals and creative designs</p>
-                    <a href="#contact" className="border-2 border-black text-lg font-semibold py-2 px-3 rounded-full bg-black text-white">Order <i className="fa-solid fa-arrow-right"></i></a>
+                    <a
+                        href="#contact"
+                        className="group border-2 font-fontDyan font-light border-black text-lg py-2 px-3 rounded-full bg-black text-white transition-transform duration-300 transform hover:scale-105">
+                        Order
+                        <i className="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-2"></i>
+                    </a>
+
                 </div>
 
                 <div>

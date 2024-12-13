@@ -28,7 +28,7 @@ const ContactCard = () => {
     };
 
     return (
-        <form ref={form} onSubmit={sendEmail} className="p-8 font-medium flex flex-col gap-4">
+        <form ref={form} onSubmit={sendEmail} className="p-8 flex flex-col gap-4 font-fontDyan font-extralight">
             <div className="flex flex-col gap-2">
                 <label htmlFor="user_name">Name</label>
                 <input

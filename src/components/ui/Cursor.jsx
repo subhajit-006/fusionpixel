@@ -27,7 +27,7 @@ function Cursor() {
       ref={cursorRef}
       className="h-[30px] w-[30px] z-20 fixed top-0 left-0 pointer-events-none" 
     >
-      <i className="fa-brands fa-cloudversify text-4xl"></i>
+      <i className="fa-brands fa-cloudversify text-4xl text-sky-300"></i>
     </div>
   );
 }

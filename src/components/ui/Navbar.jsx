@@ -36,7 +36,7 @@ function Navbar() {
         </div>
 
         {/* Middle Section - Dynamic Island */}
-        <div className="border-2 border-gray-300/50 bg-white/30 backdrop-blur-md shadow-md rounded-full px-6 py-2">
+        <div className="border-2 font-fontDyan font-extralight border-gray-300/50 bg-white/30 backdrop-blur-md shadow-md rounded-full px-6 py-2">
           <ul className="flex gap-10 text-lg font-medium items-center">
             <li
               className="cursor-pointer hover:bg-white hover:text-gray-700 rounded-full p-2 px-4 transition duration-300 ease-in-out"
@@ -66,7 +66,7 @@ function Navbar() {
         </div>
 
         {/* Right Section - Auth Buttons */}
-        <ul className="flex gap-5 items-center font-semibold">
+        <ul className="flex gap-5 items-center font-fontDyan font-light">
           <li
             className="border-2 h-[6vh] w-[6vw] flex justify-center items-center rounded-full border-gray-300 bg-gray-300 text-black hover:bg-gray-400 hover:border-gray-400 transition duration-300"
           >
