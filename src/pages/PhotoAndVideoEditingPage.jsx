@@ -34,7 +34,7 @@ function PhotoAndVideoEditingPage() {
       <Navbar />
         <div className="flex justify-center items-center flex-col gap-3 h-96">
           <h1 className="font-bold text-6xl font-fontProtest">Professional Photo & Video Editing Services</h1>
-          <p className="text-gray-700 text-xl">Transform your photos & videos with our expert editing techniques </p>
+          <p className="text-gray-700 text-xl font-light font-fontDyan">Transform your photos & videos with our expert editing techniques </p>
           <a
             href="#contact"
             className="group border-2 font-fontDyan font-light border-black text-lg py-2 px-3 rounded-full bg-black text-white transition-transform duration-300 transform hover:scale-105">
@@ -45,7 +45,7 @@ function PhotoAndVideoEditingPage() {
         </div>
 
         <div>
-          <h1 className="text-5xl font-bold text-center">Some Of Our Works</h1>
+          <h1 className="text-5xl font-bold text-center font-fontProtest">Some Of Our Works</h1>
 
           {/* Images Section */}
           <div className="flex justify-between items-center p-20">
@@ -54,7 +54,7 @@ function PhotoAndVideoEditingPage() {
                 <img
                   src={item.src}
                   alt={`media-${index}`}
-                  className="h-[20vw] rounded-xl cursor-pointer"
+                  className="h-[20vw] rounded-xl cursor-pointer  hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105 overflow-hidden group"
                   onClick={() => openModal(item.src, "image")}
                 />
               </div>
@@ -68,7 +68,7 @@ function PhotoAndVideoEditingPage() {
                 <video
                   src={item.src}
                   controls
-                  className="h-[20vw] rounded-xl cursor-pointer"
+                  className="h-[20vw] rounded-xl cursor-pointer  hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105 overflow-hidden group"
                 ></video>
               </div>
             ))}
@@ -77,9 +77,9 @@ function PhotoAndVideoEditingPage() {
 
         <div className="flex justify-between items-center p-20 h-[75vh]">
           <div className="flex flex-col gap-2">
-            <h1 className="text-5xl font-bold">Why Choose FusionPixel?</h1>
+            <h1 className="text-5xl font-bold font-fontProtest">Why Choose FusionPixel?</h1>
 
-            <div className="flex flex-col gap-1 text-lg text-gray-700">
+            <div className="flex flex-col gap-1 text-lg text-gray-700 font-light font-fontDyan">
               <p className="flex gap-2 items-center">
                 <i className="fa-solid fa-camera text-2xl"></i> Expert team of developers and designers
               </p>
@@ -103,8 +103,8 @@ function PhotoAndVideoEditingPage() {
         <div id="contact" className="flex justify-between items-center p-20">
           <ContactCard />
           <div className="flex flex-col gap-2">
-            <h1 className="text-5xl font-bold">Ready to Start Your Project?</h1>
-            <p className="text-gray-700 text-xl">
+            <h1 className="text-5xl font-bold font-fontProtest">Ready to Start Your Project?</h1>
+            <p className="text-gray-700 text-xl font-fontDyan font-light">
               Let's create stunning photos and videos that you'll cherish for a lifetime
             </p>
           </div>
