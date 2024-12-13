@@ -26,11 +26,11 @@ function Navbar() {
         ref={ref}
         height={3}
       />
-      <div className="flex z-10 justify-between">
+      <div className="flex z-50 justify-between">
         {/* Left Section - Logo */}
         <div className="flex items-center gap-2">
           <img src={logo} alt="logo" className="w-10 h-10" />
-          <p className="text-3xl font-bold">
+          <p className="text-3xl font-bold text-gray-500">
             <Link to="/">FushionPixellabs</Link>
           </p>
         </div>
@@ -73,7 +73,7 @@ function Navbar() {
             <button onClick={() => handleNavigation("/AuthPage")}>Log In</button>
           </li>
           <li
-            className="border-2 h-[6vh] w-[6vw] flex justify-center items-center rounded-full border-gray-300 hover:bg-gray-400 hover:border-gray-400 transition duration-300"
+            className="border-2 h-[6vh] w-[6vw] flex justify-center items-center rounded-full border-gray-300 bg-gray-300 hover:bg-gray-400 hover:border-gray-400 transition duration-300"
           >
             <button onClick={() => handleNavigation("/AuthPage")}>Sign Up</button>
           </li>

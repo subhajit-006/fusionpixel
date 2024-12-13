@@ -4,35 +4,46 @@ import Services from "../components/Services";
 import Contact from "../components/Contact";
 import Footer from "../components/ui/Footer";
 import Cursor from "../components/ui/Cursor";
+import bgVid from "../assets/background/bgVid.mp4"
 
 function HomePage() {
     return (
         <>
-        <Cursor />
-            <div className="bg-gradient-to-l from-[#5170ff] to-[#ff66c4]">
-                
-                <Navbar />
-                <div className="flex flex-col items-center justify-center gap-4 h-[88vh]">
+            <Cursor />
+            <div className="relative">
+                <video
+                    className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+                    src={bgVid}
+                    autoPlay
+                    loop
+                    muted
+                />
+                <div className="relative z-10">
 
-                    <h1 className="text-6xl font-bold">
-                        Welcome to FusionPixellabs
-                    </h1>
-                    <p className="text-xl text-gray-700">
-                        Transform your digital imagery with our cutting-edge pixel manipulation services.
-                    </p>
-                    <div className="flex gap-5">
-                        <button className="border-[1.5px] border-black p-2 rounded bg-black text-white font-medium hover:bg-black/80 hover:border-black/80">
-                            <Link to="/AuthPage">Get Started</Link>
-                        </button>
-                        <button className="border-[1.5px] border-black/25 p-2 rounded font-medium hover:bg-black/5">
-                            <Link to="/AboutUsPage">Learn More</Link>
-                        </button>
+                    <Navbar />
+                    <div className="flex flex-col items-center justify-center gap-4 h-[88vh]">
+
+                        <h1 className="text-6xl font-bold text-white">
+                            Welcome to FusionPixellabs
+                        </h1>
+                        <p className="text-xl text-gray-300">
+                            Transform your digital imagery with our cutting-edge pixel manipulation services.
+                        </p>
+                        <div className="flex gap-5">
+                            <button className="border-[1.5px] border-black p-2 rounded bg-black text-white font-medium hover:bg-black/80 hover:border-black/80">
+                                <Link to="/AuthPage">Get Started</Link>
+                            </button>
+                            <button className="border-[1.5px] border-black/25 p-2 rounded font-medium hover:bg-black/5">
+                                <Link to="/AboutUsPage">Learn More</Link>
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <Services />
-                <Contact />
-                <Footer />
             </div>
+
+            <Services />
+            <Contact />
+            <Footer />
         </>
     )
 }
