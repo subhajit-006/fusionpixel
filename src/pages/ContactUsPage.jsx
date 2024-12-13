@@ -8,15 +8,17 @@ function ContactUsPage() {
     return (
         <>
             <Cursor />
-            {/*Navbar*/}
-            <Navbar />
 
-            <div className="flex items-center justify-between px-20 h-[83vh] bg-[url('/assets/contactBg.png')] bg-cover bg-center">
-                {/*Contact Us Content*/}
-                <ContactUsContent />
+            <div className="bg-[#DFF2EB]">
+                {/*Navbar*/}
+                <Navbar />
+                <div className="flex items-center justify-between px-20 h-[83vh] bg-[url('/assets/contactBg.png')] bg-cover bg-center">
+                    {/*Contact Us Content*/}
+                    <ContactUsContent />
 
-                {/*Contact Us Card*/}
-                <ContactCard />
+                    {/*Contact Us Card*/}
+                    <ContactCard />
+                </div>
             </div>
 
             {/*footer*/}
