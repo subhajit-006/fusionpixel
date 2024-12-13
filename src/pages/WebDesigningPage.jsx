@@ -28,11 +28,11 @@ function WebDesigningPage() {
                     <h1 className="text-5xl font-bold text-center">Some Of Our Works</h1>
 
                     <div className="flex justify-between items-center p-20">
-                        <div className="flex flex-col gap-5">
+                        <div className="flex flex-col gap-5 hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105 overflow-hidden group">
                             <img src={portfolio} alt="portfolio" className="h-[20vw] rounded-xl" />
                             <a href="https://sanjoypaul.vercel.app/" target="_blank" className="w-[75px] text-xl font-semibold bg-black text-white border-2 border-black px-3 py-2 rounded-full">Visit!</a>
                         </div>
-                        <div className="flex flex-col gap-5">
+                        <div className="flex flex-col gap-5 hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105 overflow-hidden group">
                             <img src={intern} alt="TrackWay AI" className="h-[20vw] rounded-xl" />
                             <a href="https://intern-ship-nine.vercel.app/" target="_blank" className="w-[75px] text-xl font-semibold bg-black text-white border-2 border-black px-3 py-2 rounded-full">Visit!</a>
                         </div>
