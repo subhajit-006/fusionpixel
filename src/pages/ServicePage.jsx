@@ -16,7 +16,7 @@ function ServicePage() {
             <Nabvar />
             <div className="h-[100h] flex flex-col justify-center gap-10 py-16">
                 <div>
-                    <h1 className="text-5xl text-center font-bold">Our Services</h1>
+                    <h1 className="text-5xl text-center font-bold font-fontProtest">Our Services</h1>
                 </div>
                 <div className="flex flex-col gap-5">
                     <div className="flex text-center p-2 items-center justify-evenly gap-5">

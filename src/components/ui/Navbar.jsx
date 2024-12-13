@@ -20,7 +20,7 @@ function Navbar() {
   };
 
   return (
-    <div className="xl:sticky xl:top-0 px-14 py-3">
+    <div className="xl:top-0 px-14 py-3">
       <LoadingBar
         color="#f11946"
         ref={ref}
@@ -29,8 +29,8 @@ function Navbar() {
       <div className="flex z-50 justify-between">
         {/* Left Section - Logo */}
         <div className="flex items-center gap-2">
-          <img src={logo} alt="logo" className="w-10 h-10" />
-          <p className="text-3xl font-bold text-gray-500">
+          <img src={logo} alt="logo" className="w-14 h-14" />
+          <p className="text-5xl font-bold text-gray-500 font-fontRou">
             <Link to="/">FushionPixellabs</Link>
           </p>
         </div>

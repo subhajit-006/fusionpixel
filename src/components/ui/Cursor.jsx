@@ -19,35 +19,16 @@ function Cursor() {
       });
     };
 
-    // Continuous glow animation
-    const glowTimeline = gsap.timeline({ repeat: -1, yoyo: true });
-    glowTimeline.to(cursor, {
-      boxShadow: "0 0 15px 3px white",
-      borderColor: "white",
-      backgroundColor: "rgba(0,0,0,0.3)",
-      duration: 2,
-      ease: "power2.inOut"
-    }).to(cursor, {
-      boxShadow: "0 0 15px 3px black",
-      borderColor: "black",
-      backgroundColor: "transparent",
-      duration: 2,
-      ease: "power2.inOut"
-    });
-
     window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      glowTimeline.kill();
-    };
   }, []);
 
   return (
     <div 
       ref={cursorRef}
-      className="h-[30px] w-[30px] border-2 border-black rounded-full z-20 fixed top-0 left-0 backdrop-blur-sm pointer-events-none" 
-    />
+      className="h-[30px] w-[30px] z-20 fixed top-0 left-0 pointer-events-none" 
+    >
+      <i className="fa-brands fa-cloudversify text-4xl"></i>
+    </div>
   );
 }
 

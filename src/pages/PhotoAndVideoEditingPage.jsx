@@ -33,7 +33,7 @@ function PhotoAndVideoEditingPage() {
 
       <div>
         <div className="flex justify-center items-center flex-col gap-3 h-96">
-          <h1 className="font-bold text-6xl">Professional Photo & Video Shoot Services</h1>
+          <h1 className="font-bold text-6xl font-fontProtest">Professional Photo & Video Editing Services</h1>
           <p className="text-gray-700 text-xl">Capture your moments and stories with stunning visuals</p>
           <a
             href="#contact"

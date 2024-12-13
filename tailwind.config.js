@@ -10,7 +10,10 @@ export default {
         fontNeue: [" Bebas Neue "],
         fontRal: [" Raleway "],
         fontProtest: [" Protest Revolution "],
-        fontCin: [" Cinzel "]
+        fontCin: [" Cinzel "],
+        fontNos: [" Nosifer "],
+        fontRou: [" Rouge Script "],
+        fontDyan: [" DynaPuff "],
       }
     },
   },

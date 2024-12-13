@@ -27,9 +27,9 @@ function PhotoShootPage() {
             {/* Navbar */}
             <Navbar />
 
-            <div>
+            <div className="bg-[#DFF2EB]">
                 <div className="flex justify-center items-center flex-col gap-3 h-96">
-                    <h1 className="font-bold text-6xl">Professional Photo Editing Services</h1>
+                    <h1 className="font-bold text-6xl font-fontProtest">Professional Photo Shoot Services</h1>
                     <p className="text-gray-700 text-xl">
                         Transform your photos with our expert editing techniques
                     </p>

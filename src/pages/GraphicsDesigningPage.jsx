@@ -14,7 +14,7 @@ function GraphicsDesigningPage() {
             <div>
 
                 <div className="flex justify-center items-center flex-col gap-3 h-96">
-                    <h1 className="font-bold text-6xl">Graphics Designing Services</h1>
+                    <h1 className="font-bold text-6xl font-fontProtest">Graphics Designing Services</h1>
                     <p className="text-gray-700 text-xl">Bringing your ideas to life with stunning visuals and creative designs</p>
                     <a href="#contact" className="border-2 border-black text-lg font-semibold py-2 px-3 rounded-full bg-black text-white">Order <i className="fa-solid fa-arrow-right"></i></a>
                 </div>

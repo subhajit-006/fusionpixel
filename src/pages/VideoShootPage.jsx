@@ -15,8 +15,8 @@ function VideoShootPage() {
             <div>
 
                 <div className="flex justify-center items-center flex-col gap-3 h-96">
-                    <h1 className="font-bold text-6xl">Professional Video Editing Services</h1>
-                    <p className="text-gray-700 text-xl">Transform your raw footage into captivating visual stories</p>
+                    <h1 className="font-bold text-6xl font-fontProtest">Professional Video Shoot Services</h1>
+                    <p className="text-gray-700 text-xl font-fontDyan">Transform your raw footage into captivating visual stories</p>
                     <a href="#contact" className="border-2 border-black text-lg font-semibold py-2 px-3 rounded-full bg-black text-white">Order <i className="fa-solid fa-arrow-right"></i></a>
                 </div>
 
