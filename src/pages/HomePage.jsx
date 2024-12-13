@@ -30,10 +30,10 @@ function HomePage() {
                             Transform your digital imagery with our cutting-edge pixel manipulation services.
                         </p>
                         <div className="flex gap-5">
-                            <button className="border-[1.5px] border-black p-2 rounded bg-black text-white font-medium hover:bg-black/80 hover:border-black/80">
+                            <button className="border-[2px] border-black p-2 rounded bg-black text-white font-medium hover:bg-black/80 hover:border-black/80">
                                 <Link to="/AuthPage">Get Started</Link>
                             </button>
-                            <button className="border-[1.5px] border-black/25 p-2 rounded font-medium hover:bg-black/5">
+                            <button className="border-[2px] border-gray-400 text-gray-400 p-2 rounded font-medium hover:bg-black/5">
                                 <Link to="/AboutUsPage">Learn More</Link>
                             </button>
                         </div>

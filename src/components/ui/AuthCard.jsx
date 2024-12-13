@@ -43,7 +43,7 @@ function AuthCard() {
                             <input type="text" name="name" className="border p-2 w-96 rounded" />
                         </div>
                         <div className="flex flex-col gap-1">
-                            <p>Email</p>
+                            <p>Phone Number</p>
                             <input type="text" name="email" className="border p-2 w-96 rounded" />
                         </div>
                         <div className="flex flex-col gap-1">
@@ -88,7 +88,7 @@ function AuthCard() {
                     // Log In Form
                     <div className="flex flex-col items-center gap-2">
                         <div className="flex flex-col gap-1">
-                            <p>Email</p>
+                            <p>Phone Number</p>
                             <input type="text" name="email" className="border p-2 w-96 rounded" />
                         </div>
                         <div className="flex flex-col gap-1">
