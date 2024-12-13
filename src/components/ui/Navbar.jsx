@@ -68,12 +68,12 @@ function Navbar() {
         {/* Right Section - Auth Buttons */}
         <ul className="flex gap-5 items-center font-fontDyan font-light">
           <li
-            className="border-2 h-[6vh] w-[6vw] flex justify-center items-center rounded-full border-gray-300 bg-gray-300 text-black hover:bg-gray-400 hover:border-gray-400 transition duration-300"
+            className="border-2 h-[6vh] w-[6vw] flex justify-center items-center rounded-full border-gray-300 bg-gray-300 text-black hover:bg-gray-400 hover:border-gray-400 transition-transform duration-300 transform hover:scale-105"
           >
             <button onClick={() => handleNavigation("/AuthPage")}>Log In</button>
           </li>
           <li
-            className="border-2 h-[6vh] w-[6vw] flex justify-center items-center rounded-full border-gray-300 bg-gray-300 hover:bg-gray-400 hover:border-gray-400 transition duration-300"
+            className="border-2 h-[6vh] w-[6vw] flex justify-center items-center rounded-full border-gray-300 bg-gray-300 hover:bg-gray-400 hover:border-gray-400 transition-transform duration-300 transform hover:scale-105"
           >
             <button onClick={() => handleNavigation("/AuthPage")}>Sign Up</button>
           </li>

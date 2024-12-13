@@ -23,19 +23,20 @@ function HomePage() {
                     <Navbar />
                     <div className="flex flex-col items-center justify-center gap-4 h-[88vh]">
 
-                        <h1 className="text-6xl font-bold text-white">
+                        <h1 className="text-6xl font-bold text-white font-fontProtest">
                             Welcome to FusionPixellabs
                         </h1>
-                        <p className="text-xl text-gray-300">
+                        <p className="text-xl text-gray-300 font-fontDyan font-thin">
                             Transform your digital imagery with our cutting-edge pixel manipulation services.
                         </p>
                         <div className="flex gap-5">
-                            <button className="border-[2px] border-black p-2 rounded bg-black text-white font-medium hover:bg-black/80 hover:border-black/80">
+                            <button className="border-[2px] border-black p-2 font-fontDyan font-thin rounded bg-black text-white transition-transform duration-300 transform hover:scale-105 hover:bg-black/80 hover:border-black/80">
                                 <Link to="/AuthPage">Get Started</Link>
                             </button>
-                            <button className="border-[2px] border-gray-400 text-gray-400 p-2 rounded font-medium hover:bg-black/5">
+                            <button className="border-[2px] border-white font-fontDyan font-thin text-white p-2 rounded transition-transform duration-300 transform hover:scale-105 hover:bg-black/5">
                                 <Link to="/AboutUsPage">Learn More</Link>
                             </button>
+
                         </div>
                     </div>
                 </div>
