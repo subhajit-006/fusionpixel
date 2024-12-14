@@ -13,6 +13,8 @@ import VideoShootPage from "./pages/VideoShootPage"
 import PhotoAndVideoEditingPage from "./pages/PhotoAndVideoEditingPage"
 import ServicePage from "./pages/ServicePage"
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage"
+import PrivateRoute from "./PrivateRoute"
+import { AuthProvider } from './context/AuthContext';
 
 function App() {
   const router = createBrowserRouter([
@@ -67,12 +69,24 @@ function App() {
     {
       path: 'PrivacyPolicyPage',
       element: <PrivacyPolicyPage />
+    },
+    {
+      path: '/',
+      element: <PrivateRoute />,
+      children: [
+        {
+          path: 'Loggedin',
+          element: <HomePage />,
+        }
+      ]
     }
   ])
 
   return (
     <>
-      <RouterProvider router={router}/>
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </>
   )
 }
