@@ -35,7 +35,7 @@ const ContactCard = () => {
                     type="text"
                     name="user_name"
                     placeholder="Enter Your Name"
-                    className="font-normal border border-black/20 rounded p-2 w-[32vw] focus:border-black/50 focus:outline-none"
+                    className="font-normal border border-black/20 rounded p-2 xl:w-[32vw] w-[80vw] focus:border-black/50 focus:outline-none"
                     required
                 />
             </div>
@@ -45,7 +45,7 @@ const ContactCard = () => {
                     type="email"
                     name="user_email"
                     placeholder="Enter Your Email"
-                    className="font-normal border border-black/20 rounded p-2 w-[32vw] focus:border-black/50 focus:outline-none"
+                    className="font-normal border border-black/20 rounded p-2 xl:w-[32vw] w-[80vw] focus:border-black/50 focus:outline-none"
                     required
                 />
             </div>
@@ -54,13 +54,13 @@ const ContactCard = () => {
                 <textarea
                     name="message"
                     placeholder="Enter Your Message"
-                    className="font-normal border border-black/20 focus:border-black/50 focus:outline-none rounded p-2 w-[32vw] h-24"
+                    className="font-normal border border-black/20 focus:border-black/50 focus:outline-none rounded p-2 w-[80vw] xl:w-[32vw] h-24"
                     required
                 ></textarea>
             </div>
             <button
                 type="submit"
-                className="bg-black rounded p-2 w-[32vw] text-white"
+                className="bg-black rounded p-2 xl:w-[32vw] w-[80vw] text-white"
             >
                 Send Message
             </button>
