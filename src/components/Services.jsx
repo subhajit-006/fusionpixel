@@ -10,7 +10,7 @@ function Services() {
     return (
         <div className="flex justify-center pt-20 bg-[#DFF2EB]">
             <div className="p-5 h-auto lg:h-[100vh] rounded-2xl w-[95vw] bg-[#ecf9f4] flex flex-col justify-center items-center gap-16 shadow-[0_20px_50px_rgba(10,_57,_129,_0.7)]">
-                <h1 className="text-3xl lg:text-5xl font-bold text-center">Our Services</h1>
+                <h1 className="text-3xl lg:text-5xl font-bold text-center font-fontProtest">Our Services</h1>
                 <div className="flex flex-col gap-10">
                     {/* Row 1 */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:justify-evenly gap-5 lg:gap-20">
