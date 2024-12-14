@@ -4,7 +4,7 @@ import ContactCard from "../components/ui/ContactCrad";
 import vh1 from "../assets/services/vh1.mp4"
 import vh2 from "../assets/services/vh2.mp4"
 import Cursor from "../components/ui/Cursor";
-import vs from "../assets/serviceContent/vs.png"
+import vs from "../assets/serviceContent/vs.webp"
 
 function VideoShootPage() {
     return (
@@ -51,8 +51,8 @@ function VideoShootPage() {
                         </div>
                     </div>
 
-                    <div className="pr-20">
-                        <img src={vs} alt="vs" className="rounded-2xl h-[60vh]" />
+                    <div className="w-[40vw] h-[40vh]  text-center">
+                        <img src={vs} alt="pve" className="rounded-2xl" />
                     </div>
                 </div>
 
