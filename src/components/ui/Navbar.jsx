@@ -93,7 +93,7 @@ function Navbar() {
 
       {/* Sidebar Menu for Mobile */}
       {isSidebarOpen && (
-        <div className="fixed top-0 left-0 w-[70vw] h-full bg-gray-100 z-50 shadow-lg p-5 flex flex-col gap-5">
+        <div className="fixed top-0 left-0 w-[70vw] h-full bg-gray-100 bg-opacity-50 backdrop-blur-sm z-50 shadow-lg p-5 flex flex-col gap-5">
           <ul className="flex flex-col gap-5 text-lg font-medium">
             <li
               className="cursor-pointer hover:bg-gray-200 rounded-lg p-2 transition duration-300 ease-in-out"
@@ -134,6 +134,7 @@ function Navbar() {
           </ul>
         </div>
       )}
+
     </div>
   );
 }
