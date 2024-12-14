@@ -1,10 +1,10 @@
 import Navbar from "../components/ui/Navbar";
 import Footer from "../components/ui/Footer";
 import ContactCard from "../components/ui/ContactCrad";
-import vh1 from "../assets/services/vh1.mp4"
-import vh2 from "../assets/services/vh2.mp4"
+import vh1 from "../assets/services/vh1.mp4";
+import vh2 from "../assets/services/vh2.mp4";
 import Cursor from "../components/ui/Cursor";
-import vs from "../assets/serviceContent/vs.webp"
+import vs from "../assets/serviceContent/vs.webp";
 
 function VideoShootPage() {
     return (
@@ -12,65 +12,77 @@ function VideoShootPage() {
             <Cursor />
 
             <div className="bg-[#DFF2EB]">
-                {/*Navbar*/}
+                {/* Navbar */}
                 <Navbar />
-                <div className="flex justify-center items-center flex-col gap-3 h-96">
-                    <h1 className="font-bold text-6xl font-fontProtest">Professional Video Shoot Services</h1>
-                    <p className="text-gray-700 text-xl font-fontDyan">Transform your raw footage into captivating visual stories</p>
+
+                {/* Hero Section */}
+                <div className="flex flex-col items-center xl:justify-center gap-3 p-6 sm:p-0 sm:h-96 text-center">
+                    <h1 className="font-bold text-4xl sm:text-6xl font-fontProtest">Professional Video Shoot Services</h1>
+                    <p className="text-gray-700 text-base sm:text-xl font-fontDyan">Transform your raw footage into captivating visual stories</p>
                     <a
                         href="#contact"
-                        className="group border-2 font-fontDyan font-light border-black text-lg py-2 px-3 rounded-full bg-black text-white transition-transform duration-300 transform hover:scale-105">
+                        className="group border-2 font-fontDyan font-light border-black text-base sm:text-lg py-2 px-4 rounded-full bg-black text-white transition-transform duration-300 transform hover:scale-105">
                         Order
                         <i className="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-2"></i>
                     </a>
-
                 </div>
 
-                <div>
-                    <h1 className="text-5xl font-bold text-center font-fontProtest">Some Of Our Works</h1>
-
-                    <div className="flex justify-between items-center p-20">
-                        <div className="flex flex-col gap-5 hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105 overflow-hidden group">
-                            <video src={vh1} controls className="h-[20vw] rounded-xl"></video>
-                        </div>
-                        <div className="flex flex-col gap-5 hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105 overflow-hidden group">
-                            <video src={vh2} controls className="h-[20vw] rounded-xl"></video>
-                        </div>
+                {/* Works Section */}
+                <div className="p-4 sm:p-20">
+                    <h1 className="text-3xl sm:text-5xl font-bold text-center font-fontProtest xl:mb-20 mb-6">Some Of Our Works</h1>
+                    <div className="flex flex-wrap justify-center xl:gap-40 gap-8">
+                        {[vh1, vh2].map((video, index) => (
+                            <div key={index} className="w-full sm:w-auto flex justify-center">
+                                <video src={video} controls className="h-40 sm:h-[20vw] xl:w-full w-[65vw] sm:w-auto rounded-xl transition-transform duration-300 hover:scale-105 hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363]"></video>
+                            </div>
+                        ))}
                     </div>
                 </div>
 
-                <div className="flex justify-between items-center p-20 h-[75vh]">
-                    <div className="flex flex-col gap-2">
-                        <h1 className="text-5xl font-bold font-fontProtest">Why Choose FusionPixel?</h1>
-
-                        <div className="flex flex-col gap-1 text-lg text-gray-700 font-light font-fontDyan">
-                            <p className="flex gap-2 items-center"><i className="fa-regular fa-star text-2xl"></i>  Expert editors with years of industry experience</p>
-                            <p className="flex gap-3 items-center"><i className="fa-solid fa-bolt text-2xl"></i>  Fast turnaround times without compromising qualitys</p>
-                            <p className="flex gap-2 items-center"><i className="fa-solid fa-layer-group text-2xl"></i>  Customized editing to match your vision and style</p>
-                            <p className="flex gap-2 items-center"><i className="fa-solid fa-music text-2xl"></i>  Access to a vast library of royalty-free music and sound effects</p>
+                {/* Why Choose Section */}
+                <div className="flex flex-wrap items-center justify-center gap-8 p-6 sm:p-20 sm:h-[75vh]">
+                    <div className="w-full sm:w-1/2 flex flex-col gap-4 text-center sm:text-left">
+                        <h1 className="text-3xl sm:text-5xl font-bold font-fontProtest">Why Choose FusionPixel?</h1>
+                        <div className="flex flex-col gap-2 text-gray-700 text-sm sm:text-lg font-fontDyan font-thin">
+                            <p className="flex gap-2 items-center">
+                                <i className="fa-regular fa-star text-xl sm:text-2xl"></i>
+                                Expert editors with years of industry experience
+                            </p>
+                            <p className="flex gap-2 items-center">
+                                <i className="fa-solid fa-bolt text-xl sm:text-2xl"></i>
+                                Fast turnaround times without compromising quality
+                            </p>
+                            <p className="flex gap-2 items-center">
+                                <i className="fa-solid fa-layer-group text-xl sm:text-2xl"></i>
+                                Customized editing to match your vision and style
+                            </p>
+                            <p className="flex gap-2 items-center">
+                                <i className="fa-solid fa-music text-xl sm:text-2xl"></i>
+                                Access to a vast library of royalty-free music and sound effects
+                            </p>
                         </div>
                     </div>
-
-                    <div className="w-[40vw] h-[40vh]  text-center">
-                        <img src={vs} alt="pve" className="rounded-2xl" />
+                    <div className="w-full sm:w-[40vw] h-auto sm:h-[40vh] text-center">
+                        <img src={vs} alt="pve" className="rounded-2xl max-w-full h-auto" />
                     </div>
                 </div>
 
-                <div id="contact" className="flex justify-between items-center p-20">
-                    {/*ContactUsCard*/}
+                {/* Contact Section */}
+                <div id="contact" className="flex xl:flex-row flex-col-reverse items-center justify-center gap-6 p-6 sm:p-20">
                     <ContactCard />
-                    <div className="flex flex-col gap-2">
-                        <h1 className="text-5xl font-bold font-fontProtest">Ready to Start Your Project?</h1>
-                        <p className="text-gray-700 text-xl font-light font-fontDyan">Let our expert editors bring your vision to life through professional video editing</p>
+                    <div className="w-full sm:w-auto text-center sm:text-left">
+                        <h1 className="text-3xl sm:text-5xl font-bold font-fontProtest">Ready to Start Your Project?</h1>
+                        <p className="text-gray-700 text-base sm:text-xl font-fontDyan">
+                            Let our expert editors bring your vision to life through professional video editing
+                        </p>
                     </div>
                 </div>
-
             </div>
 
-            {/*Footer*/}
+            {/* Footer */}
             <Footer />
         </>
-    )
+    );
 }
 
 export default VideoShootPage;
