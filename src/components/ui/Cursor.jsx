@@ -23,9 +23,9 @@ function Cursor() {
   }, []);
 
   return (
-    <div 
+    <div
       ref={cursorRef}
-      className="h-[30px] w-[30px] z-20 fixed top-0 left-0 pointer-events-none" 
+      className="h-[30px] w-[30px] z-20 fixed top-0 left-0 pointer-events-none hidden md:block"
     >
       <i className="fa-brands fa-cloudversify text-4xl text-sky-300"></i>
     </div>
