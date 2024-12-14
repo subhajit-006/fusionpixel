@@ -6,7 +6,7 @@ import ph1 from "../assets/services/ph1.jpg";
 import ph2 from "../assets/services/ph2.jpg";
 import ph3 from "../assets/services/ph3.jpg";
 import Cursor from "../components/ui/Cursor";
-import ps from "../assets/serviceContent/ps.webp"
+import ps from "../assets/serviceContent/ps.webp";
 
 function PhotoShootPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,33 +25,37 @@ function PhotoShootPage() {
     return (
         <>
             <Cursor />
-
             <div className="bg-[#DFF2EB]">
                 <Navbar />
-                <div className="flex justify-center items-center flex-col gap-3 h-96">
-                    <h1 className="font-bold text-6xl font-fontProtest">Professional Photo Shoot Services</h1>
-                    <p className="text-gray-700 font-thin text-xl font-fontDyan">
+                {/* Hero Section */}
+                <div className="flex flex-col items-center xl:justify-center gap-3 p-6 sm:p-0 sm:h-96 text-center">
+                    <h1 className="font-bold text-4xl sm:text-6xl font-fontProtest">
+                        Professional Photo Shoot Services
+                    </h1>
+                    <p className="text-gray-700 font-thin text-base sm:text-xl font-fontDyan">
                         Capture your moments and stories with stunning visuals
                     </p>
                     <a
                         href="#contact"
-                        className="group border-2 font-fontDyan font-light border-black text-lg py-2 px-3 rounded-full bg-black text-white transition-transform duration-300 transform hover:scale-105">
+                        className="group border-2 font-fontDyan font-light border-black text-base sm:text-lg py-2 px-4 rounded-full bg-black text-white transition-transform duration-300 transform hover:scale-105"
+                    >
                         Order
                         <i className="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-2"></i>
                     </a>
-
                 </div>
 
-                <div>
-                    <h1 className="text-5xl font-bold text-center font-fontProtest">Some Of Our Works</h1>
-
-                    <div className="flex justify-between items-center p-20">
+                {/* Works Section */}
+                <div className="p-4 sm:p-20">
+                    <h1 className="text-3xl sm:text-5xl font-bold text-center font-fontProtest xl:mb-20 mb-6">
+                        Some Of Our Works
+                    </h1>
+                    <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
                         {[ph1, ph2, ph3].map((image, index) => (
-                            <div key={index} className="flex flex-col gap-5">
+                            <div key={index} className="w-full sm:w-auto flex justify-center">
                                 <img
                                     src={image}
                                     alt={`ph${index + 1}`}
-                                    className="h-[20vw] rounded-xl cursor-pointer hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105 overflow-hidden group"
+                                    className="h-40 sm:h-[20vw] w-full sm:w-auto object-cover rounded-xl cursor-pointer hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105 overflow-hidden group"
                                     onClick={() => openModal(image)}
                                 />
                             </div>
@@ -59,37 +63,44 @@ function PhotoShootPage() {
                     </div>
                 </div>
 
-                <div className="flex justify-between items-center p-20 h-[75vh]">
-                    <div className="flex flex-col gap-2">
-                        <h1 className="text-5xl font-bold font-fontProtest">Why Choose FusionPixel?</h1>
-
-                        <div className="flex flex-col gap-1 text-lg text-gray-700 font-fontDyan font-thin">
+                {/* Why Choose Section */}
+                <div className="flex flex-wrap items-center justify-center gap-8 p-6 sm:p-20 sm:h-[75vh]">
+                    <div className="w-full sm:w-1/2 flex flex-col gap-4 text-center sm:text-left">
+                        <h1 className="text-3xl sm:text-5xl font-bold font-fontProtest">
+                            Why Choose FusionPixel?
+                        </h1>
+                        <div className="flex flex-col gap-2 text-gray-700 text-sm sm:text-lg font-fontDyan font-thin">
                             <p className="flex gap-2 items-center">
-                                <i className="fa-regular fa-star text-2xl"></i> Expert editors with years of experience
-                            </p>
-                            <p className="flex gap-3 items-center">
-                                <i className="fa-solid fa-bolt text-2xl"></i> Quick turnaround times without compromising quality
+                                <i className="fa-regular fa-star text-xl sm:text-2xl"></i>
+                                Expert editors with years of experience
                             </p>
                             <p className="flex gap-2 items-center">
-                                <i className="fa-solid fa-layer-group text-2xl"></i> Customized editing to match your style and preferences
+                                <i className="fa-solid fa-bolt text-xl sm:text-2xl"></i>
+                                Quick turnaround times without compromising quality
                             </p>
-                            <p className="flex gap-3 items-center">
-                                <i className="fa-regular fa-image text-2xl"></i> High-quality output suitable for print and digital use
+                            <p className="flex gap-2 items-center">
+                                <i className="fa-solid fa-layer-group text-xl sm:text-2xl"></i>
+                                Customized editing to match your style and preferences
+                            </p>
+                            <p className="flex gap-2 items-center">
+                                <i className="fa-regular fa-image text-xl sm:text-2xl"></i>
+                                High-quality output suitable for print and digital use
                             </p>
                         </div>
                     </div>
-
-                    <div className="w-[40vw] h-[40vh]  text-center">
-                        <img src={ps} alt="pve" className="rounded-2xl" />
+                    <div className="w-full sm:w-[40vw] h-auto sm:h-[40vh] text-center">
+                        <img src={ps} alt="pve" className="rounded-2xl max-w-full h-auto" />
                     </div>
                 </div>
 
-                <div id="contact" className="flex justify-between items-center p-20">
-                    {/* ContactUsCard */}
+                {/* Contact Section */}
+                <div id="contact" className="flex xl:flex-row flex-col-reverse items-center justify-center xl:justify-between gap-6 p-6 sm:p-20">
                     <ContactCard />
-                    <div className="flex flex-col gap-2">
-                        <h1 className="text-5xl font-bold font-fontProtest">Ready to Start Your Project?</h1>
-                        <p className="text-gray-700 text-xl font-fontDyan">
+                    <div className="w-full sm:w-auto text-center sm:text-left">
+                        <h1 className="text-3xl sm:text-5xl font-bold font-fontProtest">
+                            Ready to Start Your Project?
+                        </h1>
+                        <p className="text-gray-700 text-base sm:text-xl font-fontDyan">
                             Let our expert editors bring out the best in your images
                         </p>
                     </div>
@@ -103,12 +114,16 @@ function PhotoShootPage() {
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
                     <div className="relative">
-                        <img src={currentImage} alt="Selected" className="max-w-[80vw] max-h-[80vh] rounded-lg" />
+                        <img
+                            src={currentImage}
+                            alt="Selected"
+                            className="max-w-[90vw] max-h-[90vh] rounded-lg"
+                        />
                         <button
                             className="absolute top-2 right-2 bg-gray-800 text-white text-2xl w-10 h-10 flex justify-center items-center rounded-full hover:bg-gray-600"
                             onClick={closeModal}
                         >
-                            <i class="fa-solid fa-xmark"></i>
+                            <i className="fa-solid fa-xmark"></i>
                         </button>
                     </div>
                 </div>
