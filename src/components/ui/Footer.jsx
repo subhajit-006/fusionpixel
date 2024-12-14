@@ -34,7 +34,7 @@ function Footer() {
                 </ul>
 
                 {/* Logo and Payment Section */}
-                <div className="flex flex-col gap-3 items-center lg:items-start lg:w-1/4">
+                <div className="flex flex-col gap-3 items-start xl:items-center lg:w-1/4">
                     <div className="flex items-center gap-2">
                         <img src={logo} alt="logo" className="w-10 h-10" />
                         <p className="text-2xl lg:text-4xl font-bold font-fontRou text-center">
@@ -77,7 +77,7 @@ function Footer() {
                     </div>
 
                     {/* Payment Methods */}
-                    <div className="flex flex-col items-center lg:items-start">
+                    <div className="flex flex-col items-center xl:items-start">
                         <p className="text-sm">Accepted Payment Methods</p>
                         <img src={upi} alt="upi" className="w-20 h-auto" />
                         <div className="text-xs text-center lg:text-left">© 2024 FusionPixelLabs. All rights reserved.</div>
