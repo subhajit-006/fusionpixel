@@ -1,84 +1,97 @@
-// Import necessary libraries and Firebase functions
-import React, { createContext, useContext, useState, useEffect } from "react";
-import { auth } from "../firebase"; // Ensure Firebase is configured correctly
-import {
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    onAuthStateChanged,
-    signOut,
-    updateProfile,
-} from "firebase/auth";
+import React, { useState, useEffect } from 'react';
+import { 
+  createUserWithEmailAndPassword, 
+  signInWithEmailAndPassword, 
+  signOut, 
+  onAuthStateChanged 
+} from 'firebase/auth';
+import { auth } from '../firebase';
+import { AuthContext } from '../components/ui/Navbar'; // Assuming you've exported AuthContext from Navbar
 
-// Create the AuthContext
-const AuthContext = createContext();
-
-// Custom hook to use AuthContext
-export function useAuth() {
-    return useContext(AuthContext);
-}
-
-// AuthProvider component to wrap the app
 export const AuthProvider = ({ children }) => {
-    const [currentUser, setCurrentUser] = useState(null);
-    const [loading, setLoading] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-    // Listen for auth state changes
-    useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
-            setCurrentUser(user);
-            setLoading(false);
-        });
+  // Sign Up (Create Account)
+  const signUp = async (email, password) => {
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      setUser(userCredential.user);
+      setIsAuthenticated(true);
+      return userCredential.user;
+    } catch (error) {
+      console.error("Error signing up:", error);
+      throw error;
+    }
+  };
 
-        return unsubscribe;
-    }, []);
+  // Login
+  const login = async (email, password) => {
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      setUser(userCredential.user);
+      setIsAuthenticated(true);
+      return userCredential.user;
+    } catch (error) {
+      console.error("Error logging in:", error);
+      throw error;
+    }
+  };
 
-    // Function to handle user signup
-    const signup = async ({ email, password, displayName }) => {
-        try {
-            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-            const user = userCredential.user;
+  // Logout
+  const logout = async () => {
+    try {
+      await signOut(auth);
+      setUser(null);
+      setIsAuthenticated(false);
+    } catch (error) {
+      console.error("Error logging out:", error);
+      throw error;
+    }
+  };
 
-            if (displayName) {
-                await updateProfile(user, { displayName });
-            }
+  // Monitor Auth State
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) {
+        // User is signed in
+        setUser(currentUser);
+        setIsAuthenticated(true);
+      } else {
+        // User is signed out
+        setUser(null);
+        setIsAuthenticated(false);
+      }
+      setLoading(false);
+    });
 
-            setCurrentUser({ ...user, displayName });
-            return user;
-        } catch (error) {
-            console.error("Error signing up: ", error);
-            throw new Error(error.message);
-        }
-    };
+    // Cleanup subscription on unmount
+    return () => unsubscribe();
+  }, []);
 
-    // Function to handle user login
-    const login = async (email, password) => {
-        try {
-            const userCredential = await signInWithEmailAndPassword(auth, email, password);
-            setCurrentUser(userCredential.user);
-            return userCredential.user;
-        } catch (error) {
-            console.error("Error logging in: ", error);
-            throw new Error(error.message);
-        }
-    };
+  // Value to be provided to consuming components
+  const authContextValue = {
+    isAuthenticated,
+    user,
+    login,
+    logout,
+    signUp,
+    loading
+  };
 
-    // Function to handle user logout
-    const logout = async () => {
-        try {
-            await signOut(auth);
-            setCurrentUser(null);
-        } catch (error) {
-            console.error("Error logging out: ", error);
-            throw new Error(error.message);
-        }
-    };
+  return (
+    <AuthContext.Provider value={authContextValue}>
+      {!loading && children}
+    </AuthContext.Provider>
+  );
+};
 
-    const value = {
-        currentUser,
-        signup,
-        login,
-        logout,
-    };
-
-    return <AuthContext.Provider value={value}>{!loading && children}</AuthContext.Provider>;
+// Optional: Custom hook for easier context consumption
+export const useAuth = () => {
+  const context = React.useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
 };

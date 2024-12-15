@@ -22,7 +22,7 @@ function HomePage() {
                     <Navbar />
                     <div className="flex flex-col items-center justify-center gap-6 h-[88vh] px-4 text-center">
                         <h1 className="text-4xl sm:text-6xl font-bold text-white font-fontProtest">
-                            Welcome to FusionPixellabs
+                            Welcome to FusionPixellab
                         </h1>
                         <p className="text-sm sm:text-xl text-gray-300 font-fontDyan font-thin">
                             Transform your digital imagery with our cutting-edge pixel manipulation services.

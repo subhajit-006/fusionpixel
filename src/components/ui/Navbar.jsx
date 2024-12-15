@@ -1,26 +1,62 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
 import LoadingBar from 'react-top-loading-bar';
 import logo from "../../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
-import { FiMenu, FiX } from "react-icons/fi"; // Icons for hamburger menu
+import { FiMenu, FiX } from "react-icons/fi";
+
+// Create an AuthContext to manage authentication state
+import { createContext } from 'react';
+
+export const AuthContext = createContext({
+  isAuthenticated: false,
+  login: () => {},
+  logout: () => {}
+});
+
+// AuthProvider component to wrap the app and provide authentication state
+export const AuthProvider = ({ children }) => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const login = () => {
+    // Implement your login logic here
+    setIsAuthenticated(true);
+  };
+
+  const logout = () => {
+    // Implement your logout logic here
+    setIsAuthenticated(false);
+  };
+
+  return (
+    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
 
 function Navbar() {
-  const ref = useRef(null); // Ref for the LoadingBar
+  const ref = useRef(null);
   const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  
+  // Use the AuthContext to get authentication state and logout function
+  const { isAuthenticated, logout } = useContext(AuthContext);
 
   const handleNavigation = (path) => {
-    // Start the loading bar
     ref.current.complete();
 
-    // Simulate loading delay (Optional, but makes the bar more noticeable)
     setTimeout(() => {
       navigate(path);
-      ref.current.complete(); // Finish the loading bar
-    }, 500); // Adjust delay as needed
+      ref.current.complete();
+    }, 500);
 
-    // Close the sidebar if it’s open (for mobile)
     setIsSidebarOpen(false);
+  };
+
+  const handleLogout = () => {
+    // Call logout function and navigate to home or login page
+    logout();
+    navigate('/');
   };
 
   return (
@@ -78,16 +114,26 @@ function Navbar() {
 
         {/* Right Section - Auth Buttons (Desktop) */}
         <ul className="hidden lg:flex gap-5 items-center font-fontDyan font-light">
-          <li
-            className="border-2 h-[6vh] w-[6vw] flex justify-center items-center rounded-full border-gray-300 bg-gray-300 text-black hover:bg-gray-400 hover:border-gray-400 transition-transform duration-300 transform hover:scale-105"
-          >
-            <button onClick={() => handleNavigation("/AuthPage")}>Log In</button>
-          </li>
-          <li
-            className="border-2 h-[6vh] w-[6vw] flex justify-center items-center rounded-full border-gray-300 bg-gray-300 hover:bg-gray-400 hover:border-gray-400 transition-transform duration-300 transform hover:scale-105"
-          >
-            <button onClick={() => handleNavigation("/AuthPage")}>Sign Up</button>
-          </li>
+          {!isAuthenticated ? (
+            <>
+              <li
+                className="border-2 h-[6vh] w-[6vw] flex justify-center items-center rounded-full border-gray-300 bg-gray-300 text-black hover:bg-gray-400 hover:border-gray-400 transition-transform duration-300 transform hover:scale-105"
+              >
+                <button onClick={() => handleNavigation("/AuthPage")}>Log In</button>
+              </li>
+              <li
+                className="border-2 h-[6vh] w-[6vw] flex justify-center items-center rounded-full border-gray-300 bg-gray-300 hover:bg-gray-400 hover:border-gray-400 transition-transform duration-300 transform hover:scale-105"
+              >
+                <button onClick={() => handleNavigation("/AuthPage")}>Sign Up</button>
+              </li>
+            </>
+          ) : (
+            <li
+              className="border-2 h-[6vh] w-[6vw] flex justify-center items-center rounded-full border-red-300 bg-red-300 text-black hover:bg-red-400 hover:border-red-400 transition-transform duration-300 transform hover:scale-105"
+            >
+              <button onClick={handleLogout}>Logout</button>
+            </li>
+          )}
         </ul>
       </div>
 
@@ -121,20 +167,29 @@ function Navbar() {
             </li>
           </ul>
           <ul className="flex flex-col gap-3 font-fontDyan font-light">
-            <li
-              className="border-2 py-2 px-4 flex justify-center rounded-lg border-gray-300 bg-gray-300 text-black hover:bg-gray-400 hover:border-gray-400 transition-transform duration-300 transform hover:scale-105"
-            >
-              <button onClick={() => handleNavigation("/AuthPage")}>Log In</button>
-            </li>
-            <li
-              className="border-2 py-2 px-4 flex justify-center rounded-lg border-gray-300 bg-gray-300 hover:bg-gray-400 hover:border-gray-400 transition-transform duration-300 transform hover:scale-105"
-            >
-              <button onClick={() => handleNavigation("/AuthPage")}>Sign Up</button>
-            </li>
+            {!isAuthenticated ? (
+              <>
+                <li
+                  className="border-2 py-2 px-4 flex justify-center rounded-lg border-gray-300 bg-gray-300 text-black hover:bg-gray-400 hover:border-gray-400 transition-transform duration-300 transform hover:scale-105"
+                >
+                  <button onClick={() => handleNavigation("/AuthPage")}>Log In</button>
+                </li>
+                <li
+                  className="border-2 py-2 px-4 flex justify-center rounded-lg border-gray-300 bg-gray-300 hover:bg-gray-400 hover:border-gray-400 transition-transform duration-300 transform hover:scale-105"
+                >
+                  <button onClick={() => handleNavigation("/AuthPage")}>Sign Up</button>
+                </li>
+              </>
+            ) : (
+              <li
+                className="border-2 py-2 px-4 flex justify-center rounded-lg border-red-300 bg-red-300 text-black hover:bg-red-400 hover:border-red-400 transition-transform duration-300 transform hover:scale-105"
+              >
+                <button onClick={handleLogout}>Logout</button>
+              </li>
+            )}
           </ul>
         </div>
       )}
-
     </div>
   );
 }

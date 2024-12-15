@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import Navbar from "../ui/Navbar";
 import AuthPageRefImg from "../../assets/AuthPageImg.jpeg";
@@ -17,9 +17,8 @@ function AuthCard() {
     });
 
     const navigate = useNavigate();
-    const { login, signup } = useAuth();
+    const { login, signUp } = useAuth(); // Corrected to match the `AuthProvider`
 
-    // Reset form and error when switching tabs
     useEffect(() => {
         setFormData({
             name: "",
@@ -54,7 +53,6 @@ function AuthCard() {
                 errors.push("Password must be at least 8 characters long");
             }
 
-            // Password complexity check
             if (!/(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])/.test(formData.password)) {
                 errors.push("Password must include uppercase, lowercase, number, and special character");
             }
@@ -85,15 +83,11 @@ function AuthCard() {
                 await login(formData.email, formData.password);
                 navigate("/dashboard");
             } else {
-                await signup({
-                    name: formData.name,
-                    email: formData.email,
-                    password: formData.password,
-                });
+                await signUp(formData.email, formData.password); // Corrected function call
                 navigate("/dashboard");
             }
         } catch (error) {
-            console.error(`Authentication error:`, error);
+            console.error("Authentication error:", error);
             setError(error.response?.data?.message || "Authentication failed");
         } finally {
             setLoading(false);
@@ -113,7 +107,6 @@ function AuthCard() {
             <Navbar />
             <div className="flex flex-grow flex-wrap justify-between px-4 sm:px-20 py-10 sm:py-20 items-center">
                 <div className="w-full sm:w-1/2 max-w-md bg-[#ecf9f4] rounded-xl p-6 shadow-lg">
-                    {/* Tabs */}
                     <div className="flex justify-between mb-6 relative">
                         {["login", "signup"].map((tab) => (
                             <button
@@ -134,18 +127,12 @@ function AuthCard() {
                         />
                     </div>
 
-                    {/* Error Handling */}
                     {error && (
-                        <div
-                            className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4"
-                            role="alert"
-                            aria-live="polite"
-                        >
+                        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
                             {error}
                         </div>
                     )}
 
-                    {/* Form */}
                     <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                         {activeTab === "signup" && (
                             <div>
@@ -200,7 +187,6 @@ function AuthCard() {
                                     type="button"
                                     onClick={handlePasswordVisibility}
                                     className="absolute right-2 top-1/2 transform -translate-y-1/2"
-                                    aria-label={showPassword ? "Hide password" : "Show password"}
                                 >
                                     {showPassword ? "👁️" : "👁️‍🗨️"}
                                 </button>
@@ -244,7 +230,6 @@ function AuthCard() {
                     </div>
                 </div>
 
-                {/* Image Section */}
                 <div className="hidden sm:flex w-1/2 justify-center items-center">
                     <img
                         src={AuthPageRefImg}
