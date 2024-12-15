@@ -86,7 +86,7 @@ function App() {
     },
     {
       path: '*',
-      element: <NotFoundPage />,
+      element: <HomePage />,
     },
   ]);
 

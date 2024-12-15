@@ -3,7 +3,9 @@ import {
   createUserWithEmailAndPassword, 
   signInWithEmailAndPassword, 
   signOut, 
-  onAuthStateChanged 
+  onAuthStateChanged, 
+  sendPasswordResetEmail, 
+  updateProfile 
 } from 'firebase/auth';
 import { auth } from '../firebase';
 import { AuthContext } from '../components/ui/Navbar'; // Assuming you've exported AuthContext from Navbar
@@ -51,6 +53,34 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  // Reset Password
+  const resetPassword = async (email) => {
+    try {
+      await sendPasswordResetEmail(auth, email);
+      console.log('Password reset email sent successfully');
+      return true;
+    } catch (error) {
+      console.error("Error sending password reset email:", error);
+      throw error;
+    }
+  };
+
+  // Update Profile
+  const updateUserProfile = async (displayName, photoURL) => {
+    try {
+      if (!auth.currentUser) {
+        throw new Error('No authenticated user found');
+      }
+      await updateProfile(auth.currentUser, { displayName, photoURL });
+      setUser({ ...auth.currentUser, displayName, photoURL });
+      console.log('User profile updated successfully');
+      return auth.currentUser;
+    } catch (error) {
+      console.error("Error updating profile:", error);
+      throw error;
+    }
+  };
+
   // Monitor Auth State
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -77,6 +107,8 @@ export const AuthProvider = ({ children }) => {
     login,
     logout,
     signUp,
+    resetPassword, // New logic for resetting password
+    updateUserProfile, // New logic for updating profile
     loading
   };
 
