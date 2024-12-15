@@ -3,8 +3,6 @@ import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import Navbar from "../ui/Navbar";
 import AuthPageRefImg from "../../assets/AuthPageImg.jpeg";
-import PhoneInput from "react-phone-number-input";
-import "react-phone-number-input/style.css";
 
 function AuthCard() {
     const [activeTab, setActiveTab] = useState("signup");
@@ -13,19 +11,19 @@ function AuthCard() {
     const [error, setError] = useState("");
     const [formData, setFormData] = useState({
         name: "",
-        phoneNumber: "",
+        email: "",
         password: "",
         confirmPassword: "",
     });
 
     const navigate = useNavigate();
-    const { login, signup, sendOTP } = useAuth();
+    const { login, signup } = useAuth();
 
     // Reset form and error when switching tabs
     useEffect(() => {
         setFormData({
             name: "",
-            phoneNumber: "",
+            email: "",
             password: "",
             confirmPassword: "",
         });
@@ -62,8 +60,8 @@ function AuthCard() {
             }
         }
 
-        if (!formData.phoneNumber) {
-            errors.push("Please enter a valid phone number");
+        if (!formData.email || !/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)) {
+            errors.push("Please enter a valid email address");
         }
 
         if (errors.length > 0) {
@@ -84,22 +82,15 @@ function AuthCard() {
             setLoading(true);
 
             if (activeTab === "login") {
-                await login(formData.phoneNumber, formData.password);
+                await login(formData.email, formData.password);
                 navigate("/dashboard");
             } else {
-                const signupResult = await signup({
+                await signup({
                     name: formData.name,
-                    phoneNumber: formData.phoneNumber,
+                    email: formData.email,
                     password: formData.password,
                 });
-
-                if (signupResult.requiresVerification) {
-                    navigate("/verify-otp", {
-                        state: { phoneNumber: formData.phoneNumber },
-                    });
-                } else {
-                    navigate("/dashboard");
-                }
+                navigate("/dashboard");
             }
         } catch (error) {
             console.error(`Authentication error:`, error);
@@ -175,16 +166,18 @@ function AuthCard() {
                         )}
 
                         <div>
-                            <label htmlFor="phoneNumber" className="block mb-2">
-                                Phone Number
+                            <label htmlFor="email" className="block mb-2">
+                                Email
                             </label>
-                            <PhoneInput
-                                id="phoneNumber"
-                                name="phoneNumber"
-                                value={formData.phoneNumber}
-                                onChange={(value) => setFormData((prev) => ({ ...prev, phoneNumber: value }))}
-                                defaultCountry="IN" // Change based on your default region
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleInputChange}
                                 className="w-full p-2 border rounded"
+                                placeholder="Enter your email"
+                                autoComplete="email"
                             />
                         </div>
 
@@ -231,14 +224,6 @@ function AuthCard() {
                                 />
                             </div>
                         )}
-
-                        <div className="flex items-center justify-between">
-                            {activeTab === "login" && (
-                                <Link to="/forgot-password" className="text-sm text-blue-600 hover:underline">
-                                    Forgot Password?
-                                </Link>
-                            )}
-                        </div>
 
                         <button
                             type="submit"

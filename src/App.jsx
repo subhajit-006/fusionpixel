@@ -1,19 +1,19 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import './App.css'
-import HomePage from './pages/HomePage'
-import ContactUsPage from './pages/ContactUsPage'
-import AuthPage from "./pages/AuthPage"
-import NotFoundPage from './pages/NotFoundPage'
-import AboutUsPage from "./pages/AboutUsPage"
-import WebDevPage from "./pages/WebDevPage"
-import WebDesigningPage from "./pages/WebDesigningPage"
-import GraphicsDesigningPage from "./pages/GraphicsDesigningPage"
-import PhotoShootPage from "./pages/PhotoShootPage"
-import VideoShootPage from "./pages/VideoShootPage"
-import PhotoAndVideoEditingPage from "./pages/PhotoAndVideoEditingPage"
-import ServicePage from "./pages/ServicePage"
-import PrivacyPolicyPage from "./pages/PrivacyPolicyPage"
-import PrivateRoute from "./PrivateRoute"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import './App.css';
+import HomePage from './pages/HomePage';
+import ContactUsPage from './pages/ContactUsPage';
+import AuthPage from "./pages/AuthPage";
+import NotFoundPage from './pages/NotFoundPage';
+import AboutUsPage from "./pages/AboutUsPage";
+import WebDevPage from "./pages/WebDevPage";
+import WebDesigningPage from "./pages/WebDesigningPage";
+import GraphicsDesigningPage from "./pages/GraphicsDesigningPage";
+import PhotoShootPage from "./pages/PhotoShootPage";
+import VideoShootPage from "./pages/VideoShootPage";
+import PhotoAndVideoEditingPage from "./pages/PhotoAndVideoEditingPage";
+import ServicePage from "./pages/ServicePage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import PrivateRoute from "./PrivateRoute";
 import { AuthProvider } from './context/AuthContext';
 
 function App() {
@@ -24,71 +24,77 @@ function App() {
     },
     {
       path: '/Home',
-      element: <HomePage />
+      element: <HomePage />,
     },
     {
-      path: 'ContactUsPage',
-      element: <ContactUsPage />
+      path: '/ContactUsPage',
+      element: <ContactUsPage />,
     },
     {
-      path: 'AuthPage',
-      element: <AuthPage />
+      path: '/AuthPage',
+      element: <AuthPage />,
     },
     {
-      path: 'AboutUsPage',
-      element: <AboutUsPage />
+      path: '/AboutUsPage',
+      element: <AboutUsPage />,
     },
     {
-      path: 'WebDevPage',
-      element: <WebDevPage />
+      path: '/WebDevPage',
+      element: <WebDevPage />,
     },
     {
-      path: 'WebDesigningPage',
-      element: <WebDesigningPage />
+      path: '/WebDesigningPage',
+      element: <WebDesigningPage />,
     },
     {
-      path: 'GraphicsDesigningPage',
-      element: <GraphicsDesigningPage />
+      path: '/GraphicsDesigningPage',
+      element: <GraphicsDesigningPage />,
     },
     {
-      path: 'PhotoShootPage',
-      element: <PhotoShootPage />
+      path: '/PhotoShootPage',
+      element: <PhotoShootPage />,
     },
     {
-      path: 'VideoShootPage',
-      element: <VideoShootPage />
+      path: '/VideoShootPage',
+      element: <VideoShootPage />,
     },
     {
-      path: 'PhotoAndVideoEditingPage',
-      element: <PhotoAndVideoEditingPage />
+      path: '/PhotoAndVideoEditingPage',
+      element: <PhotoAndVideoEditingPage />,
     },
     {
-      path: 'ServicePage',
-      element: <ServicePage />
+      path: '/ServicePage',
+      element: <ServicePage />,
     },
     {
-      path: 'PrivacyPolicyPage',
-      element: <PrivacyPolicyPage />
+      path: '/PrivacyPolicyPage',
+      element: <PrivacyPolicyPage />,
     },
     {
       path: '/',
       element: <PrivateRoute />,
       children: [
         {
-          path: 'Loggedin',
-          element: <HomePage />,
+          path: '/Loggedin',  // Make the path relative by leaving it empty
+          element: <ServicePage />,
+        },
+        {
+          path: '/Siggnedin',
+          element: <AboutUsPage />
         }
-      ]
-    }
-  ])
+      ],
+    },
+    {
+      path: '*',
+      element: <NotFoundPage />,
+    },
+  ]);
 
   return (
-    <>
-      <AuthProvider>
-        <RouterProvider router={router} />
-      </AuthProvider>
-    </>
-  )
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  );
 }
 
-export default App
+export default App;
