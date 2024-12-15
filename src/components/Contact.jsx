@@ -5,7 +5,7 @@ function Contact() {
                 Ready to bring your vision to life?
             </h1>
             <p className="text-sm sm:text-lg text-black/60 font-fontDyan font-thin text-center">
-                Join FusionPixelLabs today and let us help you create stunning digital content.
+                Join FushionPixelLabs today and let us help you create stunning digital content.
             </p>
             <div className="flex flex-col gap-3 w-full sm:w-auto">
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 items-center">

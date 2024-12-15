@@ -66,7 +66,7 @@ function Navbar() {
         {/* Left Section - Logo */}
         <div className="flex items-center gap-2">
           <img src={logo} alt="logo" className="w-12 lg:w-14 h-12 lg:h-14" />
-          <p className="text-3xl lg:text-5xl font-bold text-gray-500 font-fontRou">
+          <p className="text-3xl lg:text-5xl font-bold text-white font-fontRou">
             <Link to="/">FushionPixellabs</Link>
           </p>
         </div>
@@ -75,9 +75,9 @@ function Navbar() {
         <div className="lg:hidden flex items-center">
           <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
             {isSidebarOpen ? (
-              <FiX className="text-3xl text-gray-500" />
+              <FiX className="text-3xl text-white" />
             ) : (
-              <FiMenu className="text-3xl text-gray-500" />
+              <FiMenu className="text-3xl text-white" />
             )}
           </button>
         </div>

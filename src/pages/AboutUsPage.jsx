@@ -14,7 +14,7 @@ function AboutUsPage() {
                 {/* Hero Section */}
                 <div className="h-[45vh] flex justify-center items-center flex-col gap-2 bg-[#DFF2EB] px-4 sm:px-10">
                     <h1 className="text-4xl sm:text-6xl font-bold font-fontProtest text-center">
-                        About FusionPixellab
+                        About FushionPixellab
                     </h1>
                     <p className="text-lg sm:text-xl text-gray-500 font-fontDyan font-thin text-center">
                         Transforming ideas into visual masterpieces since 2024
