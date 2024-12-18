@@ -1,7 +1,11 @@
 {
     "routes": [
       {
-        "src": "/(.*)",
+        "src": "/(.*\\.js|.*\\.css|.*\\.png|.*\\.jpg|.*\\.svg|.*\\.webp|.*\\.ico|.*\\.json|.*\\.woff2?)",
+        "dest": "/$1"
+      },
+      {
+        "src": "/.*",
         "dest": "/index.html"
       }
     ]
