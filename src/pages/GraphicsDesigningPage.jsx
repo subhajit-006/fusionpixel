@@ -2,6 +2,11 @@ import Navbar from "../components/ui/Navbar";
 import Footer from "../components/ui/Footer";
 import ContactCard from "../components/ui/ContactCrad";
 import gd from "../assets/services/gd.png";
+import gd9 from "../assets/services/gd9.jpeg"
+import gd10 from "../assets/services/gd10.png"
+import gd12 from "../assets/services/gd12.jpeg"
+import ld from "../assets/services/ld.jpeg"
+import gd11 from "../assets/services/gd11.png"
 import Cursor from "../components/ui/Cursor";
 import gdi from "../assets/serviceContent/gdi.webp";
 
@@ -28,10 +33,17 @@ function GraphicsDesigningPage() {
                 <div>
                     <h1 className="text-4xl md:text-5xl font-bold text-center font-fontProtest mb-10">Some Of Our Works</h1>
 
-                    <div className="flex justify-center items-center p-5 md:p-20">
-                        <div className="flex flex-col gap-5 hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105 overflow-hidden group">
-                            <img src={gd} alt="design" className="h-[40vw] md:h-[20vw] rounded-xl" />
-                        </div>
+                    <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
+                        {[gd, ld, gd9, gd10, gd11, gd12].map((image, index) => (
+                            <div key={index} className="w-full sm:w-auto flex justify-center">
+                                <img
+                                    src={image}
+                                    alt={`ph${index + 1}`}
+                                    className="h-40 sm:h-[20vw] w-full sm:w-auto object-cover rounded-xl cursor-pointer hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105 overflow-hidden group"
+                                    onClick={() => openModal(image)}
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
 
