@@ -9,6 +9,8 @@ import v2 from "../assets/services/v2.mp4";
 import ph2 from "../assets/services/ph2.jpg";
 import Cursor from "../components/ui/Cursor";
 import pve from "../assets/serviceContent/pve.webp";
+import phoedi from "../assets/services/phoedi.jpeg"
+import phoedi1 from "../assets/services/phoedi1.jpg"
 
 function PhotoAndVideoEditingPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -51,7 +53,7 @@ function PhotoAndVideoEditingPage() {
           
           {/* Images Section */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {[{ src: p3 }, { src: ph3 }, { src: ph2 }].map((item, index) => (
+            {[{ src: p3 }, { src: ph3 }, { src: ph2 }, { src:phoedi }, { src:phoedi1 }].map((item, index) => (
               <div key={index} className="flex flex-col gap-5">
                 <img
                   src={item.src}
