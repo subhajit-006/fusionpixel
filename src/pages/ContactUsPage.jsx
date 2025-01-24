@@ -9,7 +9,7 @@ function ContactUsPage() {
         <>
             <Cursor />
 
-            <div className="bg-[#DFF2EB]">
+            <div className="bg-[#0E3332]">
                 {/*Navbar*/}
                 <Navbar />
                 <div className="flex items-center xl:flex-row flex-col justify-center xl:justify-between xl:px-20 xl:h-[83vh] h-[120vh] bg-[url('/assets/contactBg.png')] bg-cover bg-center">

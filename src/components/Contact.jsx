@@ -1,6 +1,6 @@
 function Contact() {
     return (
-        <div className="h-auto pt-20 pb-5 sm:h-[75vh] flex flex-col justify-center items-center gap-5 px-4 bg-[#DFF2EB]">
+        <div className="h-auto pt-20 pb-5 sm:h-[75vh] flex flex-col justify-center items-center gap-5 px-4 bg-[#0E3332]">
             <h1 className="text-3xl sm:text-5xl font-bold font-fontProtest text-center">
                 Ready to bring your vision to life?
             </h1>

@@ -4,7 +4,7 @@ import upi from "../../assets/UPI.webp";
 
 function Footer() {
     return (
-        <div className="bg-white">
+        <div className="bg-[#354545]">
             <div className="h-[1px] bg-black/20"></div>
             <div className="flex flex-col lg:flex-row items-start justify-between p-4 text-black/60">
                 {/* Privacy & Policies */}

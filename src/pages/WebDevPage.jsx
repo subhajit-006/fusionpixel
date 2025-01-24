@@ -12,7 +12,7 @@ function WebDevPage() {
             <Cursor />
             {/*Navbar*/}
 
-            <div className="bg-[#DFF2EB]">
+            <div className="bg-[#0E3332]">
                 <Navbar />
 
                 <div className="flex justify-center items-center flex-col gap-3 h-auto px-5 py-10 md:h-96">

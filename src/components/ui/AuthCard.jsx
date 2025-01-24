@@ -103,10 +103,10 @@ function AuthCard() {
     };
 
     return (
-        <div className="bg-[#DFF2EB] min-h-screen flex flex-col">
+        <div className="bg-[#0E3332] min-h-screen flex flex-col">
             <Navbar />
             <div className="flex flex-grow flex-wrap justify-between px-4 sm:px-20 py-10 sm:py-20 items-center">
-                <div className="w-full sm:w-1/2 max-w-md bg-[#ecf9f4] rounded-xl p-6 shadow-lg">
+                <div className="w-full sm:w-1/2 max-w-md bg-[#334b4b] rounded-xl p-6 shadow-lg">
                     <div className="flex justify-between mb-6 relative">
                         {["login", "signup"].map((tab) => (
                             <button

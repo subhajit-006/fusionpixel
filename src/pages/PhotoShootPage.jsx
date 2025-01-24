@@ -25,7 +25,7 @@ function PhotoShootPage() {
     return (
         <>
             <Cursor />
-            <div className="bg-[#DFF2EB]">
+            <div className="bg-[#0E3332]">
                 <Navbar />
                 {/* Hero Section */}
                 <div className="flex flex-col items-center xl:justify-center gap-3 p-6 sm:p-0 sm:h-96 text-center">

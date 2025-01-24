@@ -8,7 +8,7 @@ function ServicePage() {
     return (
         <>
             <Cursor />
-            <div className="h-[100h] flex flex-col justify-center gap-10 pb-16 bg-[#DFF2EB]">
+            <div className="h-[100h] flex flex-col justify-center gap-10 pb-16 bg-[#0E3332]">
                 <Nabvar />
                 <Services />
             </div>

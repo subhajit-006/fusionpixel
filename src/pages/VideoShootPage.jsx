@@ -11,7 +11,7 @@ function VideoShootPage() {
         <>
             <Cursor />
 
-            <div className="bg-[#DFF2EB]">
+            <div className="bg-[#0E3332]">
                 {/* Navbar */}
                 <Navbar />
 

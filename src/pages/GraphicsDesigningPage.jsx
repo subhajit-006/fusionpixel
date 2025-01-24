@@ -17,7 +17,7 @@ function GraphicsDesigningPage() {
         <>
             <Cursor />
 
-            <div className="bg-[#DFF2EB]">
+            <div className="bg-[#0E3332]">
                 <Navbar />
                 <div className="flex justify-center items-center flex-col gap-3 h-auto px-5 py-10 md:h-96">
                     <h1 className="font-bold text-4xl md:text-6xl font-fontProtest text-center">Graphics Designing Services</h1>
