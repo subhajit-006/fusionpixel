@@ -34,7 +34,7 @@ function PhotoAndVideoEditingPage() {
       <Cursor />
       <div className="bg-[#DFF2EB]">
         <Navbar />
-        
+
         {/* Hero Section */}
         <div className="flex justify-center items-center flex-col gap-3 p-6 sm:h-96">
           <h1 className="font-bold text-4xl sm:text-6xl font-fontProtest text-center">Professional Photo & Video Editing Services</h1>
@@ -50,33 +50,50 @@ function PhotoAndVideoEditingPage() {
         {/* Works Section */}
         <div className="p-6 sm:p-20">
           <h1 className="text-3xl sm:text-5xl font-bold text-center font-fontProtest mb-6 xl:mb-20">Some Of Our Works</h1>
-          
+
           {/* Images Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {[{ src: p3 }, { src: ph3 }, { src: ph2 }, { src:phoedi }, { src:phoedi1 }].map((item, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 font-bold">
+            {[
+              { src: p3, caption: "Wedding Photo Editing Concept - FushionPixel" },
+              { src: ph3, caption: "Wedding Photo Editing Concept - FushionPixel" },
+              { src: ph2, caption: "Wedding Photo Editing Concept - FushionPixel" },
+              { src: phoedi, caption: "Babay Photo Edit - FushionPixel" },
+              { src: phoedi1, caption: "Babay Photo Edit - FushionPixel" },
+            ].map((item, index) => (
               <div key={index} className="flex flex-col gap-5">
                 <img
                   src={item.src}
                   alt={`media-${index}`}
-                  className="w-full h-[40vh] rounded-xl cursor-pointer  hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105"
+                  className="w-full h-[40vh] rounded-xl cursor-pointer hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105"
                   onClick={() => openModal(item.src, "image")}
                 />
+                <p className="text-center text-sm sm:text-base text-gray-600">
+                  {item.caption}
+                </p>
               </div>
             ))}
           </div>
 
+
           {/* Videos Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
-            {[{ src: v1 }, { src: v2 }].map((item, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6 font-bold">
+            {[
+              { src: v1, caption: "Haldi Video Editing - FushionPixel" },
+              { src: v2, caption: "Wedding Video Editing - FushionPixel" },
+            ].map((item, index) => (
               <div key={index} className="flex flex-col gap-5">
                 <video
                   src={item.src}
                   controls
-                  className="w-full h-auto rounded-xl cursor-pointer  hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105"
+                  className="w-full h-auto rounded-xl cursor-pointer hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105"
                 ></video>
+                <p className="text-center text-sm sm:text-base text-gray-600">
+                  {item.caption}
+                </p>
               </div>
             ))}
           </div>
+
         </div>
 
         {/* Why Choose Section */}

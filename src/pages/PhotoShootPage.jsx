@@ -49,18 +49,26 @@ function PhotoShootPage() {
                     <h1 className="text-3xl sm:text-5xl font-bold text-center font-fontProtest xl:mb-20 mb-6">
                         Some Of Our Works
                     </h1>
-                    <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
-                        {[ph1, ph2, ph3].map((image, index) => (
-                            <div key={index} className="w-full sm:w-auto flex justify-center">
-                                <img
-                                    src={image}
-                                    alt={`ph${index + 1}`}
-                                    className="h-40 sm:h-[20vw] w-full sm:w-auto object-cover rounded-xl cursor-pointer hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105 overflow-hidden group"
-                                    onClick={() => openModal(image)}
-                                />
+                    <div className="flex flex-wrap justify-center gap-4 sm:gap-8 font-bold">
+                        {[
+                            { src: ph1, caption: "Pre-Wedding Photoshoot - FushionPixel" },
+                            { src: ph2, caption: "Pre-Wedding Photoshoot - FushionPixel" },
+                            { src: ph3, caption: "Pre-Wedding Photoshoot - FushionPixel" },
+                        ].map((item, index) => (
+                            <div key={index} className="w-full sm:w-auto flex flex-col items-center">
+                                <div className="w-full sm:w-auto flex justify-center">
+                                    <img
+                                        src={item.src}
+                                        alt={`ph${index + 1}`}
+                                        className="h-40 sm:h-[20vw] w-full sm:w-auto object-cover rounded-xl cursor-pointer hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105 overflow-hidden group"
+                                        onClick={() => openModal(item.src)}
+                                    />
+                                </div>
+                                <p className="mt-2 text-sm sm:text-base text-gray-600">{item.caption}</p>
                             </div>
                         ))}
                     </div>
+
                 </div>
 
                 {/* Why Choose Section */}

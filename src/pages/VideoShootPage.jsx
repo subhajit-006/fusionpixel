@@ -29,15 +29,28 @@ function VideoShootPage() {
 
                 {/* Works Section */}
                 <div className="p-4 sm:p-20">
-                    <h1 className="text-3xl sm:text-5xl font-bold text-center font-fontProtest xl:mb-20 mb-6">Some Of Our Works</h1>
-                    <div className="flex flex-wrap justify-center xl:gap-40 gap-8">
-                        {[vh1, vh2].map((video, index) => (
-                            <div key={index} className="w-full sm:w-auto flex justify-center">
-                                <video src={video} controls className="h-40 sm:h-[20vw] xl:w-full w-[65vw] sm:w-auto rounded-xl transition-transform duration-300 hover:scale-105 hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363]"></video>
+                    <h1 className="text-3xl sm:text-5xl font-bold text-center font-fontProtest xl:mb-20 mb-6">
+                        Some Of Our Works
+                    </h1>
+                    <div className="flex flex-wrap justify-center xl:gap-40 gap-8 font-bold">
+                        {[
+                            { src: vh1, caption: "Wedding Videoshoot - FushionPixel" },
+                            { src: vh2, caption: "Wedding Videoshoot - FushionPixel" },
+                        ].map((video, index) => (
+                            <div key={index} className="w-full sm:w-auto flex flex-col items-center">
+                                <video
+                                    src={video.src}
+                                    controls
+                                    className="h-40 sm:h-[20vw] xl:w-full w-[65vw] sm:w-auto rounded-xl transition-transform duration-300 hover:scale-105 hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363]"
+                                ></video>
+                                <p className="mt-4 text-sm sm:text-base text-gray-600 text-center">
+                                    {video.caption}
+                                </p>
                             </div>
                         ))}
                     </div>
                 </div>
+
 
                 {/* Why Choose Section */}
                 <div className="flex flex-wrap items-center justify-center gap-8 p-6 sm:p-20 sm:h-[75vh]">
