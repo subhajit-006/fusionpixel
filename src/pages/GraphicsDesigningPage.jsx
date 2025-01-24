@@ -9,6 +9,8 @@ import ld from "../assets/services/ld.jpeg"
 import gd11 from "../assets/services/gd11.png"
 import Cursor from "../components/ui/Cursor";
 import gdi from "../assets/serviceContent/gdi.webp";
+import gd13 from "../assets/services/gd13.jpeg";
+import gd14 from "../assets/services/gd14.jpeg"
 
 function GraphicsDesigningPage() {
     return (
@@ -33,18 +35,32 @@ function GraphicsDesigningPage() {
                 <div>
                     <h1 className="text-4xl md:text-5xl font-bold text-center font-fontProtest mb-10">Some Of Our Works</h1>
 
-                    <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
-                        {[gd, ld, gd9, gd10, gd11, gd12].map((image, index) => (
-                            <div key={index} className="w-full sm:w-auto flex justify-center">
-                                <img
-                                    src={image}
-                                    alt={`ph${index + 1}`}
-                                    className="h-40 sm:h-[20vw] w-full sm:w-auto object-cover rounded-xl cursor-pointer hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105 overflow-hidden group"
-                                    onClick={() => openModal(image)}
-                                />
+                    <div className="flex flex-wrap justify-center gap-4 sm:gap-8 font-bold">
+                        {[
+                            { image: gd, caption: "Aesthetic Logo - FusionPixel" },
+                            { image: ld, caption: "Photography Brand Logo - FusionPixel" },
+                            { image: gd9, caption: "Poster Art - FusionPixel" },
+                            { image: gd10, caption: "Minimasistic Banner Concept - FusionPixel" },
+                            { image: gd11, caption: "Bakery Shop Branding - FusionPixel" },
+                            { image: gd12, caption: "Minimalist Style Logo- FusionPixel" },
+                            { image: gd13, caption: "Event Banner - FusionPixel" },
+                            { image: gd14, caption: "Pujo Event Banner Design - FusionPixel" },
+                        ].map(({ image, caption }, index) => (
+                            <div key={index} className="w-full sm:w-auto flex flex-col items-center">
+                                <div className="w-full sm:w-auto flex justify-center">
+                                    <img
+                                        src={image}
+                                        alt={`ph${index + 1}`}
+                                        className="h-40 sm:h-[20vw] w-full sm:w-auto object-cover rounded-xl cursor-pointer hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105 overflow-hidden group"
+                                        onClick={() => openModal(image)}
+                                    />
+                                </div>
+                                <p className="mt-2 text-sm sm:text-base text-gray-600">{caption}</p>
                             </div>
                         ))}
                     </div>
+
+
                 </div>
 
                 <div className="flex flex-col md:flex-row justify-between items-center p-5 md:p-20 h-auto md:h-[75vh]">
