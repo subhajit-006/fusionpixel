@@ -40,7 +40,7 @@ const ContactCard = () => {
         <div>
             <form ref={form} onSubmit={sendEmail} className="p-8 flex flex-col gap-4 font-fontDyan font-extralight">
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="user_name">Name</label>
+                    <label htmlFor="user_name" className ="text-[#bef8e4]">Name</label>
                     <input
                         type="text"
                         name="user_name"
@@ -50,7 +50,7 @@ const ContactCard = () => {
                     />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="user_email">Email</label>
+                    <label htmlFor="user_email" className ="text-[#bef8e4]">Email</label>
                     <input
                         type="email"
                         name="user_email"
@@ -60,7 +60,7 @@ const ContactCard = () => {
                     />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="message">Message</label>
+                    <label htmlFor="message" className ="text-[#bef8e4]">Message</label>
                     <textarea
                         name="message"
                         placeholder="Enter Your Message"
@@ -70,7 +70,7 @@ const ContactCard = () => {
                 </div>
                 <button
                     type="submit"
-                    className="bg-black rounded p-2 xl:w-[32vw] w-[80vw] text-white"
+                    className="bg-[#4e625a] text-[#ffffff] rounded p-2 xl:w-[32vw] w-[80vw]"
                 >
                     Send Message
                 </button>

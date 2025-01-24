@@ -112,14 +112,14 @@ function AuthCard() {
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
-                                className={`w-1/2 pb-2 ${activeTab === tab ? "text-black font-semibold" : "text-gray-500"}`}
+                                className={`w-1/2 pb-2 ${activeTab === tab ? "text-[#bef8e4] font-semibold" : "text-[#DFF2EB]"}`}
                                 aria-selected={activeTab === tab}
                             >
                                 {tab === "login" ? "Log In" : "Sign Up"}
                             </button>
                         ))}
                         <div
-                            className="absolute bottom-0 h-0.5 bg-black transition-transform duration-300"
+                            className="absolute bottom-0 h-0.5 bg-[#bef8e4] transition-transform duration-300"
                             style={{
                                 width: "50%",
                                 transform: activeTab === "login" ? "translateX(0)" : "translateX(100%)",
@@ -136,7 +136,7 @@ function AuthCard() {
                     <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                         {activeTab === "signup" && (
                             <div>
-                                <label htmlFor="name" className="block mb-2">
+                                <label htmlFor="name" className="block mb-2 text-[#bef8e4]">
                                     Full Name
                                 </label>
                                 <input
@@ -153,7 +153,7 @@ function AuthCard() {
                         )}
 
                         <div>
-                            <label htmlFor="email" className="block mb-2">
+                            <label htmlFor="email" className="block mb-2 text-[#bef8e4]">
                                 Email
                             </label>
                             <input
@@ -169,7 +169,7 @@ function AuthCard() {
                         </div>
 
                         <div>
-                            <label htmlFor="password" className="block mb-2">
+                            <label htmlFor="password" className="block mb-2 text-[#bef8e4]">
                                 Password
                             </label>
                             <div className="relative">
@@ -195,7 +195,7 @@ function AuthCard() {
 
                         {activeTab === "signup" && (
                             <div>
-                                <label htmlFor="confirmPassword" className="block mb-2">
+                                <label htmlFor="confirmPassword" className="block mb-2 text-[#bef8e4]">
                                     Confirm Password
                                 </label>
                                 <input
@@ -214,13 +214,13 @@ function AuthCard() {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full p-2 bg-black text-white rounded hover:bg-gray-800 transition-colors disabled:opacity-50"
+                            className="w-full p-2 bg-[#1b3028] text-[#bef8e4] rounded hover:bg-gray-800 transition-colors disabled:opacity-50"
                         >
                             {loading ? "Processing..." : activeTab === "login" ? "Log In" : "Sign Up"}
                         </button>
                     </form>
 
-                    <div className="text-center mt-4">
+                    <div className="text-center mt-4 text-[#bef8e4]">
                         <p className="text-sm">
                             {activeTab === "login" ? "Don't have an account? " : "Already have an account? "}
                             <button onClick={switchTab} className="text-blue-600 hover:underline ml-1">

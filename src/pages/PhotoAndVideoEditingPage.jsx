@@ -37,11 +37,11 @@ function PhotoAndVideoEditingPage() {
 
         {/* Hero Section */}
         <div className="flex justify-center items-center flex-col gap-3 p-6 sm:h-96">
-          <h1 className="font-bold text-4xl sm:text-6xl font-fontProtest text-center">Professional Photo & Video Editing Services</h1>
-          <p className="text-gray-700 text-base sm:text-xl font-light font-fontDyan text-center">Transform your photos & videos with our expert editing techniques</p>
+          <h1 className="font-bold text-4xl sm:text-6xl font-fontProtest text-center text-[#DFF2EB]">Professional Photo & Video Editing Services</h1>
+          <p className="text-[#bef8e4] text-base sm:text-xl font-light font-fontDyan text-center">Transform your photos & videos with our expert editing techniques</p>
           <a
             href="#contact"
-            className="group border-2 font-fontDyan font-light border-black text-base sm:text-lg py-2 px-4 rounded-full bg-black text-white transition-transform duration-300 transform hover:scale-105">
+            className="group border-2 font-fontDyan font-light border-black text-base sm:text-lg py-2 px-4 rounded-full bg-black text-[#bef8e4] transition-transform duration-300 transform hover:scale-105">
             Order
             <i className="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-2"></i>
           </a>
@@ -49,7 +49,7 @@ function PhotoAndVideoEditingPage() {
 
         {/* Works Section */}
         <div className="p-6 sm:p-20">
-          <h1 className="text-3xl sm:text-5xl font-bold text-center font-fontProtest mb-6 xl:mb-20">Some Of Our Works</h1>
+          <h1 className="text-3xl sm:text-5xl font-bold text-center font-fontProtest mb-6 xl:mb-20 text-[#DFF2EB]">Some Of Our Works</h1>
 
           {/* Images Section */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 font-bold">
@@ -67,7 +67,7 @@ function PhotoAndVideoEditingPage() {
                   className="w-full h-[40vh] rounded-xl cursor-pointer hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105"
                   onClick={() => openModal(item.src, "image")}
                 />
-                <p className="text-center text-sm sm:text-base text-gray-600">
+                <p className="text-center text-sm sm:text-base text-[#bef8e4]">
                   {item.caption}
                 </p>
               </div>
@@ -87,7 +87,7 @@ function PhotoAndVideoEditingPage() {
                   controls
                   className="w-full h-auto rounded-xl cursor-pointer hover:shadow-[18px_18px_15px_-7px_#636363] hover:border-[#636363] transition-transform duration-300 hover:scale-105"
                 ></video>
-                <p className="text-center text-sm sm:text-base text-gray-600">
+                <p className="text-center text-sm sm:text-base text-[#bef8e4]">
                   {item.caption}
                 </p>
               </div>
@@ -99,8 +99,8 @@ function PhotoAndVideoEditingPage() {
         {/* Why Choose Section */}
         <div className="flex flex-wrap items-center justify-center gap-8 px-10 sm:p-20">
           <div className="w-full sm:w-1/2 flex flex-col gap-4 text-center sm:text-left">
-            <h1 className="text-3xl sm:text-5xl font-bold font-fontProtest">Why Choose FusionPixel?</h1>
-            <div className="flex flex-col gap-2 text-gray-700 text-sm sm:text-lg font-fontDyan font-thin">
+            <h1 className="text-3xl sm:text-5xl font-bold font-fontProtest text-[#DFF2EB]">Why Choose FusionPixel?</h1>
+            <div className="flex flex-col gap-2 text-sm sm:text-lg font-fontDyan font-thin text-[#bef8e4]">
               <p className="flex gap-2 items-center">
                 <i className="fa-solid fa-camera text-xl sm:text-2xl"></i> Expert team of developers and designers
               </p>
@@ -124,8 +124,8 @@ function PhotoAndVideoEditingPage() {
         <div id="contact" className="flex flex-wrap items-center justify-center gap-6 px-5 pb-5 sm:p-20">
           <ContactCard />
           <div className="flex flex-col gap-2">
-            <h1 className="text-3xl sm:text-5xl font-bold font-fontProtest">Ready to Start Your Project?</h1>
-            <p className="text-gray-700 text-base sm:text-xl font-fontDyan font-light">
+            <h1 className="text-3xl sm:text-5xl font-bold font-fontProtest text-[#DFF2EB]">Ready to Start Your Project?</h1>
+            <p className="text-base sm:text-xl font-fontDyan font-light text-[#bef8e4]">
               Let's create stunning photos and videos that you'll cherish for a lifetime
             </p>
           </div>

@@ -6,7 +6,7 @@ function Footer() {
     return (
         <div className="bg-[#354545]">
             <div className="h-[1px] bg-black/20"></div>
-            <div className="flex flex-col lg:flex-row items-start justify-between p-4 text-black/60">
+            <div className="flex flex-col lg:flex-row items-start justify-between p-4 text-white">
                 {/* Privacy & Policies */}
                 <div className="mb-4 lg:mb-0 lg:w-1/4">
                     <p className="text-center lg:text-left text-xs underline">
