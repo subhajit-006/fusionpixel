@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 function Cursor() {
-  const cursorRef = useRef(null);
+ {/*const cursorRef = useRef(null);
 
   useEffect(() => {
     const cursor = cursorRef.current;
@@ -29,7 +29,7 @@ function Cursor() {
     >
       <i className="fa-brands fa-cloudversify text-4xl text-sky-300"></i>
     </div>
-  );
+  );*/}
 }
 
 export default Cursor;
