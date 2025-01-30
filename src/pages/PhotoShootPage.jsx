@@ -35,15 +35,8 @@ function PhotoShootPage() {
                     <p className="text-[#bef8e4] font-thin text-base sm:text-xl font-fontDyan">
                         Capture your moments and stories with stunning visuals
                     </p>
-                    <a
-                        href="#contact"
-                        className="group border-2 font-fontDyan font-light border-black text-base sm:text-lg py-2 px-4 rounded-full bg-black text-[#bef8e4] transition-transform duration-300 transform hover:scale-105"
-                    >
-                        Order
-                        <i className="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-2"></i>
-                    </a>
                 </div>
-
+                <ContactCard />
                 {/* Works Section */}
                 <div className="p-4 sm:p-20">
                     <h1 className="text-3xl sm:text-5xl font-bold text-center font-fontProtest xl:mb-20 mb-6 text-[#DFF2EB]">
@@ -103,7 +96,6 @@ function PhotoShootPage() {
 
                 {/* Contact Section */}
                 <div id="contact" className="flex xl:flex-row flex-col-reverse items-center justify-center xl:justify-between gap-6 p-6 sm:p-20">
-                    <ContactCard />
                     <div className="w-full sm:w-auto text-center sm:text-left">
                         <h1 className="text-3xl sm:text-5xl font-bold font-fontProtest text-[#DFF2EB]">
                             Ready to Start Your Project?

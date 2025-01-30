@@ -32,18 +32,13 @@ function GraphicsDesigningPage() {
             <Cursor />
             <div className="bg-[#0E3332]">
                 <Navbar />
-                <div className="flex justify-center items-center flex-col gap-3 h-auto px-5 py-10 md:h-96">
+                <div className="flex justify-center items-center flex-col gap-3 h-auto px-5 py-10 md:h-60">
                     <h1 className="font-bold text-4xl md:text-6xl font-fontProtest text-center text-[#DFF2EB]">Graphics Designing Services</h1>
                     <p className="text-[#bef8e4] text-lg md:text-xl font-light font-fontDyan text-center">
                         Bringing your ideas to life with stunning visuals and creative designs
                     </p>
-                    <a
-                        href="#contact"
-                        className="group border-2 font-fontDyan font-light border-black text-lg py-2 px-3 rounded-full bg-black text-[#DFF2EB] transition-transform duration-300 transform hover:scale-105">
-                        Order
-                        <i className="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-2"></i>
-                    </a>
                 </div>
+                <ContactCard />
 
                 <div>
                     <h1 className="text-4xl md:text-5xl font-bold text-center font-fontProtest mb-10 text-[#DFF2EB]">Some Of Our Works</h1>
@@ -88,8 +83,7 @@ function GraphicsDesigningPage() {
                     </div>
                 </div>
 
-                <div id="contact" className="flex flex-col md:flex-row justify-between items-center p-5 md:p-20">
-                    <ContactCard />
+                <div id="contact" className="flex flex-col md:flex-row justify-center items-center p-5 md:p-20">
                     <div className="flex flex-col gap-2 w-full md:w-[40vw]">
                         <h1 className="text-4xl md:text-5xl font-bold font-fontProtest text-[#DFF2EB]">Ready to Start Your Project?</h1>
                         <p className="text-lg font-thin font-fontDyan text-[#bef8e4]">

@@ -1,6 +1,6 @@
 import Navbar from "../components/ui/Navbar";
 import Footer from "../components/ui/Footer";
-import ContactCard from "../components/ui/ContactCrad";
+import ContactUsCard from "../components/ui/ContactUsCard";
 import ContactUsContent from "../components/ContactUsContent";
 import Cursor from "../components/ui/Cursor";
 
@@ -17,7 +17,7 @@ function ContactUsPage() {
                     <ContactUsContent />
 
                     {/*Contact Us Card*/}
-                    <ContactCard />
+                    <ContactUsCard />
                 </div>
             </div>
 

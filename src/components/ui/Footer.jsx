@@ -60,11 +60,6 @@ function Footer() {
                             </a>
                         </div>
                         <div className="border-[1.6px] border-black/35 px-2 py-1 rounded-md">
-                            <a href=" https://x.com/FPixel26863?t=6qldzP4ckeQbG8PaV_40uw&s=08">
-                                <i className="fa-brands fa-twitter text-2xl"></i>
-                            </a>
-                        </div>
-                        <div className="border-[1.6px] border-black/35 px-2 py-1 rounded-md">
                             <a href="tel:+91 8240307602">
                                 <i className="fa-solid fa-phone text-2xl"></i>
                             </a>

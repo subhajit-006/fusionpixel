@@ -39,13 +39,8 @@ function PhotoAndVideoEditingPage() {
         <div className="flex justify-center items-center flex-col gap-3 p-6 sm:h-96">
           <h1 className="font-bold text-4xl sm:text-6xl font-fontProtest text-center text-[#DFF2EB]">Professional Photo & Video Editing Services</h1>
           <p className="text-[#bef8e4] text-base sm:text-xl font-light font-fontDyan text-center">Transform your photos & videos with our expert editing techniques</p>
-          <a
-            href="#contact"
-            className="group border-2 font-fontDyan font-light border-black text-base sm:text-lg py-2 px-4 rounded-full bg-black text-[#bef8e4] transition-transform duration-300 transform hover:scale-105">
-            Order
-            <i className="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-2"></i>
-          </a>
         </div>
+        <ContactCard />
 
         {/* Works Section */}
         <div className="p-6 sm:p-20">
@@ -122,7 +117,6 @@ function PhotoAndVideoEditingPage() {
 
         {/* Contact Section */}
         <div id="contact" className="flex flex-wrap items-center justify-center gap-6 px-5 pb-5 sm:p-20">
-          <ContactCard />
           <div className="flex flex-col gap-2">
             <h1 className="text-3xl sm:text-5xl font-bold font-fontProtest text-[#DFF2EB]">Ready to Start Your Project?</h1>
             <p className="text-base sm:text-xl font-fontDyan font-light text-[#bef8e4]">

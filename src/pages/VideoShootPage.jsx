@@ -19,13 +19,8 @@ function VideoShootPage() {
                 <div className="flex flex-col items-center xl:justify-center gap-3 p-6 sm:p-0 sm:h-96 text-center">
                     <h1 className="font-bold text-4xl sm:text-6xl font-fontProtest text-[#DFF2EB]">Professional Video Shoot Services</h1>
                     <p className="text-[#bef8e4] text-base sm:text-xl font-fontDyan">Transform your raw footage into captivating visual stories</p>
-                    <a
-                        href="#contact"
-                        className="group border-2 font-fontDyan font-light border-black text-base sm:text-lg py-2 px-4 rounded-full bg-black text-[#DFF2EB] transition-transform duration-300 transform hover:scale-105">
-                        Order
-                        <i className="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-2"></i>
-                    </a>
                 </div>
+                <ContactCard />
 
                 {/* Works Section */}
                 <div className="p-4 sm:p-20">
@@ -82,7 +77,6 @@ function VideoShootPage() {
 
                 {/* Contact Section */}
                 <div id="contact" className="flex xl:flex-row flex-col-reverse items-center justify-center gap-6 p-6 sm:p-20">
-                    <ContactCard />
                     <div className="w-full sm:w-auto text-center sm:text-left">
                         <h1 className="text-3xl sm:text-5xl font-bold font-fontProtest text-[#DFF2EB]">Ready to Start Your Project?</h1>
                         <p className="text-[#bef8e4] text-base sm:text-xl font-fontDyan">

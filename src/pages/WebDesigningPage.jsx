@@ -19,13 +19,8 @@ function WebDesigningPage() {
                     <p className="text-[#bef8e4] text-lg md:text-xl font-thin font-fontDyan text-center">
                         Crafting digital experiences that captivate, engage, and convert
                     </p>
-                    <a
-                        href="#contact"
-                        className="group border-2 font-fontDyan font-light border-black text-lg py-2 px-3 rounded-full bg-black text-[#DFF2EB] transition-transform duration-300 transform hover:scale-105">
-                        Order
-                        <i className="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-2"></i>
-                    </a>
                 </div>
+                <ContactCard />
 
                 <div>
                     <h1 className="text-4xl md:text-5xl font-bold text-center font-fontProtest mb-10 text-[#DFF2EB]">Some Of Our Works</h1>
@@ -63,9 +58,8 @@ function WebDesigningPage() {
                     </div>
                 </div>
 
-                <div id="contact" className="flex flex-col md:flex-row justify-between items-center p-5 md:p-20">
+                <div id="contact" className="flex flex-col md:flex-row justify-center items-center p-5 md:p-20">
                     {/*ContactUsCard*/}
-                    <ContactCard />
                     <div className="flex flex-col gap-2 w-full md:w-[40vw]">
                             <h1 className="text-4xl md:text-5xl font-bold font-fontProtest text-[#DFF2EB]">Ready to Start Your Project?</h1>
                         <p className="text-[#bef8e4] text-lg md:text-xl font-fontDyan font-thin">
