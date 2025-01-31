@@ -12,6 +12,7 @@ import Cursor from "../components/ui/Cursor";
 import gdi from "../assets/serviceContent/gdi.webp";
 import gd13 from "../assets/services/gd13.jpeg";
 import gd14 from "../assets/services/gd14.jpeg";
+import gd15 from "../assets/services/gd15.jpeg"
 
 function GraphicsDesigningPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -52,6 +53,7 @@ function GraphicsDesigningPage() {
                             { image: gd12, caption: "Minimalist Style Logo- FusionPixel" },
                             { image: gd13, caption: "Event Banner - FusionPixel" },
                             { image: gd14, caption: "Pujo Event Banner Design - FusionPixel" },
+                            { image: gd15, caption: "Swarashati pujo card - FusionPixel" },
                         ].map(({ image, caption }, index) => (
                             <div key={index} className="w-full sm:w-auto flex flex-col items-center">
                                 <div className="w-full sm:w-auto flex justify-center">
